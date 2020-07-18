@@ -1,0 +1,8 @@
+require: 
+  - rubocop-rails
+  - rubocop-sorbet
+Style/Documentation:
+  Enabled: false
+AllCops:
+  NewCops: enable
+
