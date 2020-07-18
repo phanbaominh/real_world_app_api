@@ -40,6 +40,8 @@ gem 'rubocop-rails', require: false
 gem 'rubocop-sorbet', require: false
 gem 'sorbet-rails'
 gem 'sorbet-runtime'
+gem 'devise'
+gem 'jwt'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

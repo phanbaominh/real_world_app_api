@@ -1418,6 +1418,235 @@ class ActionDispatch::Routing::RouteSet::Generator
   def use_recall_for(key); end
   def use_relative_controller!; end
 end
+class ActionDispatch::Routing::Redirect < ActionDispatch::Routing::Endpoint
+  def block; end
+  def call(env); end
+  def escape(params); end
+  def escape_fragment(params); end
+  def escape_path(params); end
+  def initialize(status, block); end
+  def inspect; end
+  def path(params, request); end
+  def redirect?; end
+  def relative_path?(path); end
+  def serve(req); end
+  def status; end
+end
+class ActionDispatch::Routing::PathRedirect < ActionDispatch::Routing::Redirect
+  def inspect; end
+  def interpolation_required?(string, params); end
+  def path(params, request); end
+end
+class ActionDispatch::Routing::OptionRedirect < ActionDispatch::Routing::Redirect
+  def inspect; end
+  def options; end
+  def path(params, request); end
+end
+module ActionDispatch::Routing::Redirection
+  def redirect(*args, &block); end
+end
+class ActionDispatch::Routing::Mapper
+  def initialize(set); end
+  def self.normalize_name(name); end
+  def self.normalize_path(path); end
+  include ActionDispatch::Routing::Mapper::Base
+  include ActionDispatch::Routing::Mapper::Concerns
+  include ActionDispatch::Routing::Mapper::CustomUrls
+  include ActionDispatch::Routing::Mapper::HttpHelpers
+  include ActionDispatch::Routing::Mapper::Resources
+  include ActionDispatch::Routing::Mapper::Scoping
+  include ActionDispatch::Routing::Redirection
+end
+class ActionDispatch::Routing::Mapper::Constraints < ActionDispatch::Routing::Endpoint
+  def app; end
+  def constraint_args(constraint, request); end
+  def constraints; end
+  def dispatcher?; end
+  def initialize(app, constraints, strategy); end
+  def matches?(req); end
+  def serve(req); end
+end
+class ActionDispatch::Routing::Mapper::Mapping
+  def add_controller_module(controller, modyoule); end
+  def add_wildcard_options(options, formatted, path_ast); end
+  def app(blocks); end
+  def application; end
+  def ast; end
+  def blocks(callable_constraint); end
+  def build_conditions(current_conditions, request_class); end
+  def build_path(ast, requirements, anchor); end
+  def check_controller_and_action(path_params, controller, action); end
+  def check_part(name, part, path_params, hash); end
+  def conditions; end
+  def constraints(options, path_params); end
+  def default_action; end
+  def default_controller; end
+  def defaults; end
+  def dispatcher(raise_on_name_error); end
+  def initialize(set, ast, defaults, controller, default_action, modyoule, to, formatted, scope_constraints, blocks, via, options_constraints, anchor, options); end
+  def make_route(name, precedence); end
+  def normalize_defaults(options); end
+  def normalize_format(formatted); end
+  def normalize_options!(options, path_params, modyoule); end
+  def path; end
+  def request_method; end
+  def required_defaults; end
+  def requirements; end
+  def self.build(scope, set, ast, controller, default_action, to, via, formatted, options_constraints, anchor, options); end
+  def self.check_via(via); end
+  def self.normalize_path(path, format); end
+  def self.optional_format?(path, format); end
+  def split_constraints(path_params, constraints); end
+  def split_to(to); end
+  def to; end
+  def translate_controller(controller); end
+  def verify_regexp_requirements(requirements); end
+end
+module ActionDispatch::Routing::Mapper::Base
+  def app_name(app, rails_app); end
+  def default_url_options(options); end
+  def default_url_options=(options); end
+  def define_generate_prefix(app, name); end
+  def has_named_route?(name); end
+  def match(path, options = nil); end
+  def mount(app, options = nil); end
+  def rails_app?(app); end
+  def with_default_scope(scope, &block); end
+end
+module ActionDispatch::Routing::Mapper::HttpHelpers
+  def delete(*args, &block); end
+  def get(*args, &block); end
+  def map_method(method, args, &block); end
+  def patch(*args, &block); end
+  def post(*args, &block); end
+  def put(*args, &block); end
+end
+module ActionDispatch::Routing::Mapper::Scoping
+  def constraints(constraints = nil); end
+  def controller(controller); end
+  def defaults(defaults = nil); end
+  def merge_action_scope(parent, child); end
+  def merge_as_scope(parent, child); end
+  def merge_blocks_scope(parent, child); end
+  def merge_constraints_scope(parent, child); end
+  def merge_controller_scope(parent, child); end
+  def merge_defaults_scope(parent, child); end
+  def merge_format_scope(parent, child); end
+  def merge_module_scope(parent, child); end
+  def merge_options_scope(parent, child); end
+  def merge_path_names_scope(parent, child); end
+  def merge_path_scope(parent, child); end
+  def merge_shallow_path_scope(parent, child); end
+  def merge_shallow_prefix_scope(parent, child); end
+  def merge_shallow_scope(parent, child); end
+  def merge_to_scope(parent, child); end
+  def merge_via_scope(parent, child); end
+  def namespace(path, options = nil); end
+  def scope(*args); end
+end
+module ActionDispatch::Routing::Mapper::Resources
+  def action_options?(options); end
+  def action_path(name); end
+  def add_route(action, controller, options, _path, to, via, formatted, anchor, options_constraints); end
+  def api_only?; end
+  def apply_action_options(options); end
+  def apply_common_behavior_for(method, resources, options, &block); end
+  def canonical_action?(action); end
+  def collection; end
+  def decomposed_match(path, controller, options, _path, to, via, formatted, anchor, options_constraints); end
+  def get_to_from_path(path, to, action); end
+  def map_match(paths, options); end
+  def match(path, *rest, &block); end
+  def match_root_route(options); end
+  def member; end
+  def name_for_action(as, action); end
+  def namespace(path, options = nil); end
+  def nested; end
+  def nested_options; end
+  def nested_scope?; end
+  def new; end
+  def param_constraint; end
+  def param_constraint?; end
+  def parent_resource; end
+  def path_for_action(action, path); end
+  def path_scope(path); end
+  def prefix_name_for_action(as, action); end
+  def resource(*resources, &block); end
+  def resource_method_scope?; end
+  def resource_scope(resource); end
+  def resource_scope?; end
+  def resources(*resources, &block); end
+  def resources_path_names(options); end
+  def root(path, options = nil); end
+  def scope_action_options; end
+  def set_member_mappings_for_resource; end
+  def shallow; end
+  def shallow?; end
+  def shallow_nesting_depth; end
+  def shallow_scope; end
+  def using_match_shorthand?(path); end
+  def with_scope_level(kind); end
+end
+class ActionDispatch::Routing::Mapper::Resources::Resource
+  def actions; end
+  def collection_name; end
+  def collection_scope; end
+  def controller; end
+  def default_actions; end
+  def initialize(entities, api_only, shallow, options = nil); end
+  def member_name; end
+  def member_scope; end
+  def name; end
+  def nested_param; end
+  def nested_scope; end
+  def new_scope(new_path); end
+  def param; end
+  def path; end
+  def plural; end
+  def resource_scope; end
+  def shallow?; end
+  def shallow_scope; end
+  def singleton?; end
+  def singular; end
+end
+class ActionDispatch::Routing::Mapper::Resources::SingletonResource < ActionDispatch::Routing::Mapper::Resources::Resource
+  def collection_name; end
+  def default_actions; end
+  def initialize(entities, api_only, shallow, options); end
+  def member_name; end
+  def member_scope; end
+  def nested_scope; end
+  def plural; end
+  def singleton?; end
+  def singular; end
+end
+module ActionDispatch::Routing::Mapper::Concerns
+  def concern(name, callable = nil, &block); end
+  def concerns(*args); end
+end
+module ActionDispatch::Routing::Mapper::CustomUrls
+  def direct(name, options = nil, &block); end
+  def resolve(*args, &block); end
+end
+class ActionDispatch::Routing::Mapper::Scope
+  def [](key); end
+  def action_name(name_prefix, prefix, collection_name, member_name); end
+  def each; end
+  def frame; end
+  def initialize(hash, parent = nil, scope_level = nil); end
+  def nested?; end
+  def new(hash); end
+  def new_level(level); end
+  def null?; end
+  def options; end
+  def parent; end
+  def resource_method_scope?; end
+  def resource_scope?; end
+  def resources?; end
+  def root?; end
+  def scope_level; end
+  include Enumerable
+end
 class ActionDispatch::Request::Utils
   def perform_deep_munge; end
   def perform_deep_munge=(obj); end
@@ -1881,283 +2110,6 @@ class ActionDispatch::Flash::FlashHash
   def update(h); end
   include Enumerable
 end
-class ActionDispatch::Routing::Redirect < ActionDispatch::Routing::Endpoint
-  def block; end
-  def call(env); end
-  def escape(params); end
-  def escape_fragment(params); end
-  def escape_path(params); end
-  def initialize(status, block); end
-  def inspect; end
-  def path(params, request); end
-  def redirect?; end
-  def relative_path?(path); end
-  def serve(req); end
-  def status; end
-end
-class ActionDispatch::Routing::PathRedirect < ActionDispatch::Routing::Redirect
-  def inspect; end
-  def interpolation_required?(string, params); end
-  def path(params, request); end
-end
-class ActionDispatch::Routing::OptionRedirect < ActionDispatch::Routing::Redirect
-  def inspect; end
-  def options; end
-  def path(params, request); end
-end
-module ActionDispatch::Routing::Redirection
-  def redirect(*args, &block); end
-end
-class ActionDispatch::Routing::Mapper
-  def initialize(set); end
-  def self.normalize_name(name); end
-  def self.normalize_path(path); end
-  include ActionDispatch::Routing::Mapper::Base
-  include ActionDispatch::Routing::Mapper::Concerns
-  include ActionDispatch::Routing::Mapper::CustomUrls
-  include ActionDispatch::Routing::Mapper::HttpHelpers
-  include ActionDispatch::Routing::Mapper::Resources
-  include ActionDispatch::Routing::Mapper::Scoping
-  include ActionDispatch::Routing::Redirection
-end
-class ActionDispatch::Routing::Mapper::Constraints < ActionDispatch::Routing::Endpoint
-  def app; end
-  def constraint_args(constraint, request); end
-  def constraints; end
-  def dispatcher?; end
-  def initialize(app, constraints, strategy); end
-  def matches?(req); end
-  def serve(req); end
-end
-class ActionDispatch::Routing::Mapper::Mapping
-  def add_controller_module(controller, modyoule); end
-  def add_wildcard_options(options, formatted, path_ast); end
-  def app(blocks); end
-  def application; end
-  def ast; end
-  def blocks(callable_constraint); end
-  def build_conditions(current_conditions, request_class); end
-  def build_path(ast, requirements, anchor); end
-  def check_controller_and_action(path_params, controller, action); end
-  def check_part(name, part, path_params, hash); end
-  def conditions; end
-  def constraints(options, path_params); end
-  def default_action; end
-  def default_controller; end
-  def defaults; end
-  def dispatcher(raise_on_name_error); end
-  def initialize(set, ast, defaults, controller, default_action, modyoule, to, formatted, scope_constraints, blocks, via, options_constraints, anchor, options); end
-  def make_route(name, precedence); end
-  def normalize_defaults(options); end
-  def normalize_format(formatted); end
-  def normalize_options!(options, path_params, modyoule); end
-  def path; end
-  def request_method; end
-  def required_defaults; end
-  def requirements; end
-  def self.build(scope, set, ast, controller, default_action, to, via, formatted, options_constraints, anchor, options); end
-  def self.check_via(via); end
-  def self.normalize_path(path, format); end
-  def self.optional_format?(path, format); end
-  def split_constraints(path_params, constraints); end
-  def split_to(to); end
-  def to; end
-  def translate_controller(controller); end
-  def verify_regexp_requirements(requirements); end
-end
-module ActionDispatch::Routing::Mapper::Base
-  def app_name(app, rails_app); end
-  def default_url_options(options); end
-  def default_url_options=(options); end
-  def define_generate_prefix(app, name); end
-  def has_named_route?(name); end
-  def match(path, options = nil); end
-  def mount(app, options = nil); end
-  def rails_app?(app); end
-  def with_default_scope(scope, &block); end
-end
-module ActionDispatch::Routing::Mapper::HttpHelpers
-  def delete(*args, &block); end
-  def get(*args, &block); end
-  def map_method(method, args, &block); end
-  def patch(*args, &block); end
-  def post(*args, &block); end
-  def put(*args, &block); end
-end
-module ActionDispatch::Routing::Mapper::Scoping
-  def constraints(constraints = nil); end
-  def controller(controller); end
-  def defaults(defaults = nil); end
-  def merge_action_scope(parent, child); end
-  def merge_as_scope(parent, child); end
-  def merge_blocks_scope(parent, child); end
-  def merge_constraints_scope(parent, child); end
-  def merge_controller_scope(parent, child); end
-  def merge_defaults_scope(parent, child); end
-  def merge_format_scope(parent, child); end
-  def merge_module_scope(parent, child); end
-  def merge_options_scope(parent, child); end
-  def merge_path_names_scope(parent, child); end
-  def merge_path_scope(parent, child); end
-  def merge_shallow_path_scope(parent, child); end
-  def merge_shallow_prefix_scope(parent, child); end
-  def merge_shallow_scope(parent, child); end
-  def merge_to_scope(parent, child); end
-  def merge_via_scope(parent, child); end
-  def namespace(path, options = nil); end
-  def scope(*args); end
-end
-module ActionDispatch::Routing::Mapper::Resources
-  def action_options?(options); end
-  def action_path(name); end
-  def add_route(action, controller, options, _path, to, via, formatted, anchor, options_constraints); end
-  def api_only?; end
-  def apply_action_options(options); end
-  def apply_common_behavior_for(method, resources, options, &block); end
-  def canonical_action?(action); end
-  def collection; end
-  def decomposed_match(path, controller, options, _path, to, via, formatted, anchor, options_constraints); end
-  def get_to_from_path(path, to, action); end
-  def map_match(paths, options); end
-  def match(path, *rest, &block); end
-  def match_root_route(options); end
-  def member; end
-  def name_for_action(as, action); end
-  def namespace(path, options = nil); end
-  def nested; end
-  def nested_options; end
-  def nested_scope?; end
-  def new; end
-  def param_constraint; end
-  def param_constraint?; end
-  def parent_resource; end
-  def path_for_action(action, path); end
-  def path_scope(path); end
-  def prefix_name_for_action(as, action); end
-  def resource(*resources, &block); end
-  def resource_method_scope?; end
-  def resource_scope(resource); end
-  def resource_scope?; end
-  def resources(*resources, &block); end
-  def resources_path_names(options); end
-  def root(path, options = nil); end
-  def scope_action_options; end
-  def set_member_mappings_for_resource; end
-  def shallow; end
-  def shallow?; end
-  def shallow_nesting_depth; end
-  def shallow_scope; end
-  def using_match_shorthand?(path); end
-  def with_scope_level(kind); end
-end
-class ActionDispatch::Routing::Mapper::Resources::Resource
-  def actions; end
-  def collection_name; end
-  def collection_scope; end
-  def controller; end
-  def default_actions; end
-  def initialize(entities, api_only, shallow, options = nil); end
-  def member_name; end
-  def member_scope; end
-  def name; end
-  def nested_param; end
-  def nested_scope; end
-  def new_scope(new_path); end
-  def param; end
-  def path; end
-  def plural; end
-  def resource_scope; end
-  def shallow?; end
-  def shallow_scope; end
-  def singleton?; end
-  def singular; end
-end
-class ActionDispatch::Routing::Mapper::Resources::SingletonResource < ActionDispatch::Routing::Mapper::Resources::Resource
-  def collection_name; end
-  def default_actions; end
-  def initialize(entities, api_only, shallow, options); end
-  def member_name; end
-  def member_scope; end
-  def nested_scope; end
-  def plural; end
-  def singleton?; end
-  def singular; end
-end
-module ActionDispatch::Routing::Mapper::Concerns
-  def concern(name, callable = nil, &block); end
-  def concerns(*args); end
-end
-module ActionDispatch::Routing::Mapper::CustomUrls
-  def direct(name, options = nil, &block); end
-  def resolve(*args, &block); end
-end
-class ActionDispatch::Routing::Mapper::Scope
-  def [](key); end
-  def action_name(name_prefix, prefix, collection_name, member_name); end
-  def each; end
-  def frame; end
-  def initialize(hash, parent = nil, scope_level = nil); end
-  def nested?; end
-  def new(hash); end
-  def new_level(level); end
-  def null?; end
-  def options; end
-  def parent; end
-  def resource_method_scope?; end
-  def resource_scope?; end
-  def resources?; end
-  def root?; end
-  def scope_level; end
-  include Enumerable
-end
-class ActionController::LogSubscriber < ActiveSupport::LogSubscriber
-end
-module ActionController::ParamsWrapper
-  def _extract_parameters(parameters); end
-  def _wrap_parameters(parameters); end
-  def _wrapper_enabled?; end
-  def _wrapper_formats; end
-  def _wrapper_key; end
-  def process_action(*args); end
-  extend ActiveSupport::Concern
-end
-class Anonymous_Struct_3 < Struct
-  def exclude; end
-  def exclude=(_); end
-  def format; end
-  def format=(_); end
-  def include; end
-  def include=(_); end
-  def klass; end
-  def klass=(_); end
-  def model; end
-  def model=(_); end
-  def name; end
-  def name=(_); end
-  def self.[](*arg0); end
-  def self.inspect; end
-  def self.members; end
-  def self.new(*arg0); end
-end
-class ActionController::ParamsWrapper::Options < Anonymous_Struct_3
-  def _default_wrap_model; end
-  def include; end
-  def initialize(name, format, include, exclude, klass, model); end
-  def lock; end
-  def locked?; end
-  def model; end
-  def name; end
-  def self.from_hash(hash); end
-  def synchronize(&block); end
-  def try_lock; end
-  def unlock; end
-  include Mutex_m
-end
-module ActionController::ParamsWrapper::ClassMethods
-  def _set_wrapper_options(options); end
-  def inherited(klass); end
-  def wrap_parameters(name_or_model_or_options, options = nil); end
-end
 class AbstractController::Error < StandardError
 end
 class AbstractController::ActionNotFound < StandardError
@@ -2245,6 +2197,82 @@ class ActionController::Metal < AbstractController::Base
   def url_for(string); end
   include ActionController::Testing::Functional
 end
+module AbstractController::UrlFor
+  def _routes; end
+  extend ActiveSupport::Concern
+  include ActionDispatch::Routing::UrlFor
+end
+module AbstractController::UrlFor::ClassMethods
+  def _routes; end
+  def action_methods; end
+end
+module ActionController::UrlFor
+  def url_options; end
+  extend ActiveSupport::Concern
+  include AbstractController::UrlFor
+end
+module AbstractController::Logger
+  extend ActiveSupport::Concern
+end
+module ActionController::Redirecting
+  def _compute_redirect_to_location(request, options); end
+  def _extract_redirect_to_status(options, response_status); end
+  def _url_host_allowed?(url); end
+  def redirect_back(fallback_location:, allow_other_host: nil, **args); end
+  def redirect_to(options = nil, response_status = nil); end
+  def self._compute_redirect_to_location(request, options); end
+  extend ActiveSupport::Concern
+  include AbstractController::Logger
+  include ActionController::UrlFor
+end
+class ActionController::LogSubscriber < ActiveSupport::LogSubscriber
+end
+module ActionController::ParamsWrapper
+  def _extract_parameters(parameters); end
+  def _wrap_parameters(parameters); end
+  def _wrapper_enabled?; end
+  def _wrapper_formats; end
+  def _wrapper_key; end
+  def process_action(*args); end
+  extend ActiveSupport::Concern
+end
+class Anonymous_Struct_3 < Struct
+  def exclude; end
+  def exclude=(_); end
+  def format; end
+  def format=(_); end
+  def include; end
+  def include=(_); end
+  def klass; end
+  def klass=(_); end
+  def model; end
+  def model=(_); end
+  def name; end
+  def name=(_); end
+  def self.[](*arg0); end
+  def self.inspect; end
+  def self.members; end
+  def self.new(*arg0); end
+end
+class ActionController::ParamsWrapper::Options < Anonymous_Struct_3
+  def _default_wrap_model; end
+  def include; end
+  def initialize(name, format, include, exclude, klass, model); end
+  def lock; end
+  def locked?; end
+  def model; end
+  def name; end
+  def self.from_hash(hash); end
+  def synchronize(&block); end
+  def try_lock; end
+  def unlock; end
+  include Mutex_m
+end
+module ActionController::ParamsWrapper::ClassMethods
+  def _set_wrapper_options(options); end
+  def inherited(klass); end
+  def wrap_parameters(name_or_model_or_options, options = nil); end
+end
 class AbstractController::DoubleRenderError < AbstractController::Error
   def initialize(message = nil); end
 end
@@ -2274,34 +2302,6 @@ module AbstractController::Translation
 end
 module AbstractController::AssetPaths
   extend ActiveSupport::Concern
-end
-module AbstractController::UrlFor
-  def _routes; end
-  extend ActiveSupport::Concern
-  include ActionDispatch::Routing::UrlFor
-end
-module AbstractController::UrlFor::ClassMethods
-  def _routes; end
-  def action_methods; end
-end
-module ActionController::UrlFor
-  def url_options; end
-  extend ActiveSupport::Concern
-  include AbstractController::UrlFor
-end
-module AbstractController::Logger
-  extend ActiveSupport::Concern
-end
-module ActionController::Redirecting
-  def _compute_redirect_to_location(request, options); end
-  def _extract_redirect_to_status(options, response_status); end
-  def _url_host_allowed?(url); end
-  def redirect_back(fallback_location:, allow_other_host: nil, **args); end
-  def redirect_to(options = nil, response_status = nil); end
-  def self._compute_redirect_to_location(request, options); end
-  extend ActiveSupport::Concern
-  include AbstractController::Logger
-  include ActionController::UrlFor
 end
 module ActionController::Rendering
   def _normalize_args(action = nil, options = nil, &blk); end
@@ -2779,9 +2779,15 @@ class ActionController::API < ActionController::Metal
   def include_all_helpers?; end
   def logger; end
   def logger=(value); end
+  def mimes_for_respond_to; end
+  def mimes_for_respond_to=(val); end
+  def mimes_for_respond_to?; end
   def rescue_handlers; end
   def rescue_handlers=(val); end
   def rescue_handlers?; end
+  def responder; end
+  def responder=(val); end
+  def responder?; end
   def self.__callbacks; end
   def self.__callbacks=(val); end
   def self.__callbacks?; end
@@ -2817,9 +2823,15 @@ class ActionController::API < ActionController::Metal
   def self.logger; end
   def self.logger=(value); end
   def self.middleware_stack; end
+  def self.mimes_for_respond_to; end
+  def self.mimes_for_respond_to=(val); end
+  def self.mimes_for_respond_to?; end
   def self.rescue_handlers; end
   def self.rescue_handlers=(val); end
   def self.rescue_handlers?; end
+  def self.responder; end
+  def self.responder=(val); end
+  def self.responder?; end
   def self.without_modules(*modules); end
   extend AbstractController::Callbacks::ClassMethods
   extend AbstractController::Helpers::ClassMethods
@@ -2832,6 +2844,7 @@ class ActionController::API < ActionController::Metal
   extend ActionController::Railties::Helpers
   extend ActionController::Renderers::ClassMethods
   extend ActionController::Rendering::ClassMethods
+  extend ActionController::RespondWith::ClassMethods
   extend ActionView::Rendering::ClassMethods
   extend ActionView::ViewPaths::ClassMethods
   extend ActiveRecord::Railties::ControllerRuntime::ClassMethods
@@ -2839,6 +2852,7 @@ class ActionController::API < ActionController::Metal
   extend ActiveSupport::DescendantsTracker
   extend ActiveSupport::Rescuable::ClassMethods
   extend Anonymous_Module_4
+  extend Devise::Controllers::Helpers::ClassMethods
   include AbstractController::Callbacks
   include AbstractController::Callbacks
   include AbstractController::Helpers
@@ -2861,6 +2875,7 @@ class ActionController::API < ActionController::Metal
   include ActionController::Rendering
   include ActionController::Rendering
   include ActionController::Rescue
+  include ActionController::RespondWith
   include ActionController::StrongParameters
   include ActionController::UrlFor
   include ActionController::UrlFor
@@ -2875,17 +2890,10 @@ class ActionController::API < ActionController::Metal
   include ActiveSupport::Callbacks
   include ActiveSupport::Rescuable
   include ActiveSupport::Rescuable
+  include Devise::Controllers::Helpers
+  include Devise::Controllers::UrlHelpers
   include Turbolinks::Controller
   include Turbolinks::Redirection
-end
-module Anonymous_Module_4
-  def inherited(klass); end
-end
-module ActionView::RoutingUrlFor
-  def default_url_options=(obj); end
-  def self.default_url_options=(obj); end
-  include ActionDispatch::Routing::UrlFor
-  include ActionDispatch::Routing::UrlFor
 end
 class ActionController::Base < ActionController::Metal
   def __callbacks; end
@@ -2956,6 +2964,9 @@ class ActionController::Base < ActionController::Metal
   def log_warning_on_csrf_failure=(value); end
   def logger; end
   def logger=(value); end
+  def mimes_for_respond_to; end
+  def mimes_for_respond_to=(val); end
+  def mimes_for_respond_to?; end
   def notice; end
   def per_form_csrf_tokens; end
   def per_form_csrf_tokens=(value); end
@@ -2968,6 +2979,9 @@ class ActionController::Base < ActionController::Metal
   def rescue_handlers; end
   def rescue_handlers=(val); end
   def rescue_handlers?; end
+  def responder; end
+  def responder=(val); end
+  def responder?; end
   def self.__callbacks; end
   def self.__callbacks=(val); end
   def self.__callbacks?; end
@@ -3047,6 +3061,9 @@ class ActionController::Base < ActionController::Metal
   def self.logger=(value); end
   def self.make_response!(request); end
   def self.middleware_stack; end
+  def self.mimes_for_respond_to; end
+  def self.mimes_for_respond_to=(val); end
+  def self.mimes_for_respond_to?; end
   def self.per_form_csrf_tokens; end
   def self.per_form_csrf_tokens=(value); end
   def self.perform_caching; end
@@ -3058,6 +3075,9 @@ class ActionController::Base < ActionController::Metal
   def self.rescue_handlers; end
   def self.rescue_handlers=(val); end
   def self.rescue_handlers?; end
+  def self.responder; end
+  def self.responder=(val); end
+  def self.responder?; end
   def self.stylesheets_dir; end
   def self.stylesheets_dir=(value); end
   def self.without_modules(*modules); end
@@ -3083,6 +3103,7 @@ class ActionController::Base < ActionController::Metal
   extend ActionController::Renderers::ClassMethods
   extend ActionController::Rendering::ClassMethods
   extend ActionController::RequestForgeryProtection::ClassMethods
+  extend ActionController::RespondWith::ClassMethods
   extend ActionView::Layouts::ClassMethods
   extend ActionView::Rendering::ClassMethods
   extend ActionView::ViewPaths::ClassMethods
@@ -3091,6 +3112,9 @@ class ActionController::Base < ActionController::Metal
   extend ActiveSupport::DescendantsTracker
   extend ActiveSupport::Rescuable::ClassMethods
   extend Anonymous_Module_5
+  extend Devise::Controllers::Helpers::ClassMethods
+  extend Responders::ControllerMethod
+  extend Responders::ControllerMethod
   include AbstractController::AssetPaths
   include AbstractController::Caching
   include AbstractController::Caching::Fragments
@@ -3134,6 +3158,7 @@ class ActionController::Base < ActionController::Metal
   include ActionController::Rendering
   include ActionController::RequestForgeryProtection
   include ActionController::Rescue
+  include ActionController::RespondWith
   include ActionController::Streaming
   include ActionController::StrongParameters
   include ActionController::UrlFor
@@ -3150,8 +3175,19 @@ class ActionController::Base < ActionController::Metal
   include ActiveSupport::Callbacks
   include ActiveSupport::Rescuable
   include ActiveSupport::Rescuable
+  include Devise::Controllers::Helpers
+  include Devise::Controllers::UrlHelpers
   include Turbolinks::Controller
   include Turbolinks::Redirection
+end
+module Anonymous_Module_4
+  def inherited(klass); end
+end
+module ActionView::RoutingUrlFor
+  def default_url_options=(obj); end
+  def self.default_url_options=(obj); end
+  include ActionDispatch::Routing::UrlFor
+  include ActionDispatch::Routing::UrlFor
 end
 module Anonymous_Module_5
   def inherited(klass); end
