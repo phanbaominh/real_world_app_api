@@ -2116,11 +2116,6 @@ module ActiveRecord::Enum
   SR_ENUM_KEYWORDS = ::T.let(nil, ::T.untyped)
 end
 
-module ActiveRecord::Enum
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
 class ActiveRecord::ExplainSubscriber
   EXPLAINED_SQLS = ::T.let(nil, ::T.untyped)
   IGNORED_PAYLOADS = ::T.let(nil, ::T.untyped)
@@ -7036,9 +7031,6 @@ module DeviseHelper
   def devise_error_messages!(); end
 end
 
-module DeviseHelper
-end
-
 class DidYouMean::ClassNameChecker
   def class_name(); end
 
@@ -8292,34 +8284,6 @@ Gem::UnsatisfiableDepedencyError = Gem::UnsatisfiableDependencyError
 Gem::Version::Requirement = Gem::Requirement
 
 module GeneratedUrlHelpers
-  def cancel_user_registration_path(*args); end
-
-  def cancel_user_registration_url(*args); end
-
-  def destroy_user_session_path(*args); end
-
-  def destroy_user_session_url(*args); end
-
-  def edit_user_password_path(*args); end
-
-  def edit_user_password_url(*args); end
-
-  def edit_user_registration_path(*args); end
-
-  def edit_user_registration_url(*args); end
-
-  def new_user_password_path(*args); end
-
-  def new_user_password_url(*args); end
-
-  def new_user_registration_path(*args); end
-
-  def new_user_registration_url(*args); end
-
-  def new_user_session_path(*args); end
-
-  def new_user_session_url(*args); end
-
   def rails_info_path(*args); end
 
   def rails_info_properties_path(*args); end
@@ -8335,22 +8299,6 @@ module GeneratedUrlHelpers
   def rails_mailers_path(*args); end
 
   def rails_mailers_url(*args); end
-
-  def user_password_path(*args); end
-
-  def user_password_url(*args); end
-
-  def user_path(*args); end
-
-  def user_registration_path(*args); end
-
-  def user_registration_url(*args); end
-
-  def user_session_path(*args); end
-
-  def user_session_url(*args); end
-
-  def user_url(*args); end
 end
 
 module GlobalID::Locator
@@ -9229,13 +9177,6 @@ module IRB
   def self.run_config(); end
 
   def self.setup(ap_path, argv: T.unsafe(nil)); end
-end
-
-module ITypeAssert
-  extend ::T::Private::Abstract::Hooks
-  extend ::T::InterfaceWrapper::Helpers
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 class Integer
@@ -11854,76 +11795,12 @@ module Parlour
   VERSION = ::T.let(nil, ::T.untyped)
 end
 
-class Parlour::ConflictResolver
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
 module Parlour::Debugging::Tree
   INDENT_SPACES = ::T.let(nil, ::T.untyped)
 end
 
-module Parlour::Debugging::Tree
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-module Parlour::Debugging
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-class Parlour::ParseError
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-class Parlour::Plugin
-  extend ::T::Private::Abstract::Hooks
-  extend ::T::InterfaceWrapper::Helpers
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-class Parlour::RbiGenerator::Options
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
 class Parlour::RbiGenerator::Parameter
   PREFIXES = ::T.let(nil, ::T.untyped)
-end
-
-class Parlour::RbiGenerator::Parameter
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-class Parlour::RbiGenerator::RbiObject
-  extend ::T::Private::Abstract::Hooks
-  extend ::T::InterfaceWrapper::Helpers
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-class Parlour::RbiGenerator
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-module Parlour::TypeLoader
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-class Parlour::TypeParser::NodePath
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-class Parlour::TypeParser
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 ParseError = Racc::ParseError
@@ -12011,6 +11888,42 @@ end
 
 module Polyfill
   VERSION = ::T.let(nil, ::T.untyped)
+end
+
+module Polyfill::Module::M47290252061100
+end
+
+module Polyfill::Module::M47290252061100
+end
+
+module Polyfill::Module::M47290266662440
+end
+
+module Polyfill::Module::M47290266662440
+end
+
+module Polyfill::Module::M47290266979940
+end
+
+module Polyfill::Module::M47290266979940
+end
+
+module Polyfill::Module::M47290267328580
+end
+
+module Polyfill::Module::M47290267328580
+end
+
+module Polyfill::Module::M47290268217480
+end
+
+module Polyfill::Module::M47290268217480
+end
+
+module Polyfill::Module::M47290268574860
+end
+
+module Polyfill::Module::M47290268574860
 end
 
 class Proc
@@ -15770,70 +15683,11 @@ module Socket::Constants
   SO_BPF_EXTENSIONS = ::T.let(nil, ::T.untyped)
 end
 
-class SorbetRails::Config
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
 SorbetRails::JobRbiFormatter::Parameter = Parlour::RbiGenerator::Parameter
-
-class SorbetRails::JobRbiFormatter
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
 
 SorbetRails::MailerRbiFormatter::Parameter = Parlour::RbiGenerator::Parameter
 
-class SorbetRails::MailerRbiFormatter
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-class SorbetRails::ModelColumnUtils::ColumnType
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-module SorbetRails::ModelColumnUtils
-  extend ::T::Private::Abstract::Hooks
-  extend ::T::InterfaceWrapper::Helpers
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
 SorbetRails::ModelPlugins::Base::Parameter = Parlour::RbiGenerator::Parameter
-
-module SorbetRails::ModelPlugins
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-class SorbetRails::ModelRbiFormatter
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-module SorbetRails::ModelUtils
-  extend ::T::Private::Abstract::Hooks
-  extend ::T::InterfaceWrapper::Helpers
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-module SorbetRails::PluckToTStruct
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-module SorbetRails::SorbetUtils
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-module SorbetRails::Utils
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
 
 module SorbetRails
   extend ::T::Private::Methods::SingletonMethodHooks
@@ -16164,11 +16018,6 @@ end
 
 class SynchronizedDelegator
   RUBYGEMS_ACTIVATION_MONITOR = ::T.let(nil, ::T.untyped)
-end
-
-class TA
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 module TZInfo::RubyCoreSupport
@@ -16866,7 +16715,6 @@ class User
   def password_confirmation(); end
 
   def password_confirmation=(password_confirmation); end
-  RelationType = ::T.let(nil, ::T.untyped)
 end
 
 class User::ActiveRecord_AssociationRelation
@@ -16920,6 +16768,19 @@ class User
   def self.devise_modules=(val); end
 
   def self.devise_modules?(); end
+end
+
+class UsersController::UserFields
+  def self.inherited(s); end
+end
+
+class UsersController::UserParams
+  def self.inherited(s); end
+end
+
+class UsersController
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 class Vector

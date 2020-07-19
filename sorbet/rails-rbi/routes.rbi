@@ -14,6 +14,83 @@ class ActionMailer::Base
 end
 
 module GeneratedUrlHelpers
+  # Sigs for route /api/users/login(.:format)
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def new_user_session_path(*args, **kwargs); end
+
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def new_user_session_url(*args, **kwargs); end
+
+  # Sigs for route /api/users/login(.:format)
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def user_session_path(*args, **kwargs); end
+
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def user_session_url(*args, **kwargs); end
+
+  # Sigs for route /api/users/sign_out(.:format)
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def destroy_user_session_path(*args, **kwargs); end
+
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def destroy_user_session_url(*args, **kwargs); end
+
+  # Sigs for route /api/users/password/new(.:format)
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def new_user_password_path(*args, **kwargs); end
+
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def new_user_password_url(*args, **kwargs); end
+
+  # Sigs for route /api/users/password/edit(.:format)
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def edit_user_password_path(*args, **kwargs); end
+
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def edit_user_password_url(*args, **kwargs); end
+
+  # Sigs for route /api/users/password(.:format)
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def user_password_path(*args, **kwargs); end
+
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def user_password_url(*args, **kwargs); end
+
+  # Sigs for route /api/users/cancel(.:format)
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def cancel_user_registration_path(*args, **kwargs); end
+
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def cancel_user_registration_url(*args, **kwargs); end
+
+  # Sigs for route /api/users/sign_up(.:format)
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def new_user_registration_path(*args, **kwargs); end
+
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def new_user_registration_url(*args, **kwargs); end
+
+  # Sigs for route /api/users/edit(.:format)
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def edit_user_registration_path(*args, **kwargs); end
+
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def edit_user_registration_url(*args, **kwargs); end
+
+  # Sigs for route /api/users(.:format)
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def user_registration_path(*args, **kwargs); end
+
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def user_registration_url(*args, **kwargs); end
+
+  # Sigs for route /api/user(.:format)
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def user_path(*args, **kwargs); end
+
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def user_url(*args, **kwargs); end
+
   # Sigs for route /rails/active_storage/blobs/:signed_id/*filename(.:format)
   sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
   def rails_service_blob_path(*args, **kwargs); end

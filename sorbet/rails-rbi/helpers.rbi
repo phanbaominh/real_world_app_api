@@ -4,9 +4,17 @@
 module ApplicationHelper
   include Kernel
   include ActionView::Helpers
+  include Devise::Controllers::Helpers
+end
+
+module DeviseHelper
+  include Kernel
+  include ActionView::Helpers
+  include ApplicationHelper
+  include Devise::Controllers::Helpers
 end
 
 module ActionController::Helpers
-  sig { returns(T.all(ApplicationHelper)) }
+  sig { returns(T.all(ApplicationHelper, DeviseHelper)) }
   def helpers; end
 end

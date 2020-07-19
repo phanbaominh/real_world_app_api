@@ -3916,7 +3916,6 @@
 # wrong constant name unknown_action!
 # wrong constant name <static-init>
 # wrong constant name devise_error_messages!
-# wrong constant name <static-init>
 # wrong constant name class_name
 # wrong constant name class_names
 # wrong constant name corrections
@@ -4416,20 +4415,6 @@
 # wrong constant name spec
 # wrong constant name spec=
 # wrong constant name <static-init>
-# wrong constant name cancel_user_registration_path
-# wrong constant name cancel_user_registration_url
-# wrong constant name destroy_user_session_path
-# wrong constant name destroy_user_session_url
-# wrong constant name edit_user_password_path
-# wrong constant name edit_user_password_url
-# wrong constant name edit_user_registration_path
-# wrong constant name edit_user_registration_url
-# wrong constant name new_user_password_path
-# wrong constant name new_user_password_url
-# wrong constant name new_user_registration_path
-# wrong constant name new_user_registration_url
-# wrong constant name new_user_session_path
-# wrong constant name new_user_session_url
 # wrong constant name rails_info_path
 # wrong constant name rails_info_properties_path
 # wrong constant name rails_info_properties_url
@@ -4438,14 +4423,6 @@
 # wrong constant name rails_info_url
 # wrong constant name rails_mailers_path
 # wrong constant name rails_mailers_url
-# wrong constant name user_password_path
-# wrong constant name user_password_url
-# wrong constant name user_path
-# wrong constant name user_registration_path
-# wrong constant name user_registration_url
-# wrong constant name user_session_path
-# wrong constant name user_session_url
-# wrong constant name user_url
 # uninitialized constant GetoptLong
 # uninitialized constant GetoptLong
 # wrong constant name <Class:BaseLocator>
@@ -7364,6 +7341,12 @@
 # wrong constant name fnmatch?
 # wrong constant name glob
 # wrong constant name make_symlink
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name <static-init>
 # uninitialized constant Prime
 # uninitialized constant Prime
 # wrong constant name <<
@@ -7957,7 +7940,7 @@
 # uninitialized constant Rails::Generators::TestCase::VERSION
 # wrong constant name properties
 # wrong constant name properties=
-# undefined singleton method `property<defaultArg>1' for `#<Module:0x0000561c20eac5a8>'
+# undefined singleton method `property<defaultArg>1' for `#<Module:0x0000560545b1c038>'
 # wrong constant name <static-init>
 # wrong constant name properties
 # wrong constant name properties=
@@ -9659,9 +9642,6 @@
 # wrong constant name get_encoding
 # wrong constant name <static-init>
 # uninitialized constant User::ACTIONS
-# wrong constant name <Class:ActiveRecord_AssociationRelation>
-# wrong constant name <Class:ActiveRecord_Associations_CollectionProxy>
-# wrong constant name <Class:ActiveRecord_Relation>
 # uninitialized constant User::BLACKLISTED_CLASS_METHODS
 # uninitialized constant User::BLACKLIST_FOR_SERIALIZATION
 # uninitialized constant User::CALLBACKS
@@ -9692,8 +9672,6 @@
 # A copy of User::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
 # A copy of User::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
 # A copy of User::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
-# A copy of User::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
-# wrong constant name <static-init>
 # A copy of User::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
 # A copy of User::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
 # A copy of User::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
@@ -9707,8 +9685,6 @@
 # A copy of User::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
 # A copy of User::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
 # A copy of User::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
-# A copy of User::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
-# wrong constant name <static-init>
 # A copy of User::ActiveRecord_Relation has been removed from the module tree but is still active!
 # A copy of User::ActiveRecord_Relation has been removed from the module tree but is still active!
 # A copy of User::ActiveRecord_Relation has been removed from the module tree but is still active!
@@ -9722,13 +9698,13 @@
 # A copy of User::ActiveRecord_Relation has been removed from the module tree but is still active!
 # A copy of User::ActiveRecord_Relation has been removed from the module tree but is still active!
 # A copy of User::ActiveRecord_Relation has been removed from the module tree but is still active!
-# A copy of User::ActiveRecord_Relation has been removed from the module tree but is still active!
-# wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name devise_modules
 # wrong constant name devise_modules=
 # wrong constant name devise_modules?
+# wrong constant name inherited
+# wrong constant name inherited
 # wrong constant name <Class:ZeroVectorError>
 # wrong constant name []
 # wrong constant name []=

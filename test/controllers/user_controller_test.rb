@@ -1,13 +1,11 @@
-# typed: true
+# typed: false
 # frozen_string_literal: true
 
 require 'test_helper'
 
 class UserControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
-  # test "the truth" do
-  #   assert true
-  # end
+
   USER_CONFIG = {
     email: 'test@mail.com', password: 'gamegame', username: 'tester'
   }.freeze
@@ -36,7 +34,7 @@ class UserControllerTest < ActionDispatch::IntegrationTest
     assert_equal(@token, received_user['token'])
   end
 
-  test 'register user' do
+  def tes_register_user
     user = USER_CONFIG
     post user_registration_path, params: { user: user }
     assert_response :success
@@ -47,20 +45,20 @@ class UserControllerTest < ActionDispatch::IntegrationTest
     assert_nil(received_user['bio'])
   end
 
-  test 'login user' do
+  def test_login_user
     assert_create_and_login_user
     received_user = user_from_response
     assert_user(received_user)
   end
 
-  test 'get user' do
+  def test_get_user
     assert_create_and_login_user
     get user_path, headers: authorization_header
     assert_response :success
     assert_user(user_from_response)
   end
 
-  test 'update user' do
+  def test_update_user
     assert_create_and_login_user
     put user_path, params: { user: { email: 'newemail@new.com' } }, headers: authorization_header
     assert_response :success
