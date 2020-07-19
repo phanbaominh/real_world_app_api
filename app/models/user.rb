@@ -16,6 +16,10 @@ class User < ApplicationRecord
   has_many :followers, through: :follower_follows, class_name: 'User'
   has_many :followings, through: :following_follows, class_name: 'User'
 
+  has_many :articles, dependent: :nullify, foreign_key: 'author_id', inverse_of: :author
+  has_many :favorites, dependent: :nullify
+  has_many :favorited_articles, through: :favorites, source: :article
+  has_many :comments, dependent: :nullify
   sig { returns(String) }
   def generate_jwt
     JWT.encode(
