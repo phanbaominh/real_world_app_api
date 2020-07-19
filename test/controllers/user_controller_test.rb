@@ -6,28 +6,6 @@ require 'test_helper'
 class UserControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
-  USER_CONFIG = {
-    email: 'test@mail.com', password: 'gamegame', username: 'tester'
-  }.freeze
-
-  def assert_create_and_login_user
-    @user = User.new(USER_CONFIG)
-    @user.save
-    post new_user_session_path, params: { user: { email: @user.email, password: @user.password } }
-    assert_response :success, 'login successful'
-    @token = user_from_response['token']
-    assert_not_nil @token, 'token exist'
-  end
-
-  def authorization_header
-    { 'Authorization' => "Token token=#{@token}" }
-  end
-
-  def user_from_response
-    body = JSON.parse(@response.body)
-    body['user'] || body
-  end
-
   def assert_user(received_user)
     assert_equal(@user.email, received_user['email'])
     assert_equal(@user.username, received_user['username'])

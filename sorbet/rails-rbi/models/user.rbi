@@ -108,6 +108,44 @@ module User::GeneratedAttributeMethods
   def username?; end
 end
 
+module User::GeneratedAssociationMethods
+  sig { returns(::Follow::ActiveRecord_Associations_CollectionProxy) }
+  def follower_follows; end
+
+  sig { returns(T::Array[Integer]) }
+  def follower_follow_ids; end
+
+  sig { params(value: T::Enumerable[::Follow]).void }
+  def follower_follows=(value); end
+
+  sig { returns(::User::ActiveRecord_Associations_CollectionProxy) }
+  def followers; end
+
+  sig { returns(T::Array[Integer]) }
+  def follower_ids; end
+
+  sig { params(value: T::Enumerable[::User]).void }
+  def followers=(value); end
+
+  sig { returns(::Follow::ActiveRecord_Associations_CollectionProxy) }
+  def following_follows; end
+
+  sig { returns(T::Array[Integer]) }
+  def following_follow_ids; end
+
+  sig { params(value: T::Enumerable[::Follow]).void }
+  def following_follows=(value); end
+
+  sig { returns(::User::ActiveRecord_Associations_CollectionProxy) }
+  def followings; end
+
+  sig { returns(T::Array[Integer]) }
+  def following_ids; end
+
+  sig { params(value: T::Enumerable[::User]).void }
+  def followings=(value); end
+end
+
 module User::CustomFinderMethods
   sig { params(limit: Integer).returns(T::Array[User]) }
   def first_n(limit); end
@@ -127,6 +165,7 @@ end
 
 class User < ApplicationRecord
   include User::GeneratedAttributeMethods
+  include User::GeneratedAssociationMethods
   extend User::CustomFinderMethods
   extend User::QueryMethodsReturningRelation
   RelationType = T.type_alias { T.any(User::ActiveRecord_Relation, User::ActiveRecord_Associations_CollectionProxy, User::ActiveRecord_AssociationRelation) }

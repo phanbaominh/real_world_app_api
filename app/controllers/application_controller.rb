@@ -44,9 +44,10 @@ class ApplicationController < ActionController::Base
     head :unauthorized unless signed_in?
   end
 
-  sig { returns(User) }
+  sig { returns(T.nilable(User)) }
   def current_user
-    @current_user ||= super || User.find(@current_user_id)
+    tmp = @current_user_id ? User.find(@current_user_id) : nil
+    @current_user ||= super || tmp
   end
 
   sig { returns(T::Boolean) }

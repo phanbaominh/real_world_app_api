@@ -16,20 +16,22 @@ class UsersController < ApplicationController
   class UserParams < T::Struct
     const :user, UserFields
   end
+
   sig { void }
   def show; end
 
   sig { void }
   def update
-    if current_user.update(user_params.user.serialize)
+    if T.must(current_user).update(user_params.user.serialize)
       render :show
     else
-      render json: { errors: current_user.errors }, status: :unprocessable_entity
+      render json: { errors: T.must(current_user).errors }, status: :unprocessable_entity
     end
   end
 
   private
 
+  sig { returns(UserParams) }
   def user_params
     TypedParams[UserParams].new.extract!(params)
   end
