@@ -371,6 +371,7 @@
 # uninitialized constant ActionDispatch::SystemTestCase::TURBOLINKS_VISIT
 # uninitialized constant ActionDispatch::SystemTestCase::UNDEFINED
 # uninitialized constant ActionDispatch::SystemTestCase::UNTRACKED
+# uninitialized constant ActionDispatch::SystemTestCase::USER_CONFIG
 # undefined singleton method `driven_by<defaultArg>1' for `ActionDispatch::SystemTestCase'
 # undefined singleton method `driven_by<defaultArg>2' for `ActionDispatch::SystemTestCase'
 # undefined singleton method `driven_by<defaultArg>3' for `ActionDispatch::SystemTestCase'
@@ -657,6 +658,7 @@
 # uninitialized constant ActionView::TestCase::UNDEFINED
 # uninitialized constant ActionView::TestCase::UNTRACKED
 # uninitialized constant ActionView::TestCase::URI_REGEXP
+# uninitialized constant ActionView::TestCase::USER_CONFIG
 # wrong constant name _helper_methods
 # wrong constant name _helper_methods=
 # wrong constant name _helper_methods?
@@ -767,6 +769,7 @@
 # uninitialized constant ActiveJob::TestCase::TEARDOWN_METHODS
 # uninitialized constant ActiveJob::TestCase::UNDEFINED
 # uninitialized constant ActiveJob::TestCase::UNTRACKED
+# uninitialized constant ActiveJob::TestCase::USER_CONFIG
 # wrong constant name <static-init>
 # wrong constant name <Class:AttrNames>
 # wrong constant name <static-init>
@@ -855,19 +858,7 @@
 # wrong constant name updated?
 # wrong constant name <static-init>
 # wrong constant name <static-init>
-# uninitialized constant ActiveRecord::Associations::Builder::BelongsTo::VALID_OPTIONS
-# wrong constant name <static-init>
-# wrong constant name add_counter_cache_callbacks
-# wrong constant name add_counter_cache_methods
-# wrong constant name add_default_callbacks
-# wrong constant name add_touch_callbacks
-# wrong constant name define_accessors
-# wrong constant name touch_record
 # uninitialized constant ActiveRecord::Associations::Builder::CollectionAssociation::VALID_OPTIONS
-# wrong constant name <static-init>
-# wrong constant name define_callback
-# wrong constant name define_extensions
-# wrong constant name wrap_scope
 # wrong constant name <Class:JoinTableResolver>
 # wrong constant name association_name
 # wrong constant name initialize
@@ -889,14 +880,8 @@
 # wrong constant name <static-init>
 # wrong constant name build
 # wrong constant name <static-init>
-# uninitialized constant ActiveRecord::Associations::Builder::HasMany::CALLBACKS
-# uninitialized constant ActiveRecord::Associations::Builder::HasMany::VALID_OPTIONS
-# wrong constant name <static-init>
 # uninitialized constant ActiveRecord::Associations::Builder::HasOne::VALID_OPTIONS
 # wrong constant name <static-init>
-# uninitialized constant ActiveRecord::Associations::Builder::SingularAssociation::VALID_OPTIONS
-# wrong constant name <static-init>
-# wrong constant name define_constructors
 # undefined method `add_to_target<defaultArg>1' for class `ActiveRecord::Associations::CollectionAssociation'
 # undefined method `build<defaultArg>1' for class `ActiveRecord::Associations::CollectionAssociation'
 # undefined method `delete_all<defaultArg>1' for class `ActiveRecord::Associations::CollectionAssociation'
@@ -1638,6 +1623,198 @@
 # wrong constant name to_h
 # wrong constant name to_s<defaultArg>1
 # wrong constant name try_convert
+# uninitialized constant Article::ACTIONS
+# uninitialized constant Article::BLACKLISTED_CLASS_METHODS
+# uninitialized constant Article::CALLBACKS
+# uninitialized constant Article::CALLBACK_FILTER_TYPES
+# uninitialized constant Article::CALL_COMPILABLE_REGEXP
+# wrong constant name <Class:GeneratedRelationMethods>
+# uninitialized constant Article::MAX_PASSWORD_LENGTH_ALLOWED
+# uninitialized constant Article::NAME_COMPILABLE_REGEXP
+# uninitialized constant Article::UNASSIGNABLE_KEYS
+# wrong constant name after_add_for_comments
+# wrong constant name after_add_for_comments=
+# wrong constant name after_add_for_comments?
+# wrong constant name after_add_for_favored_users
+# wrong constant name after_add_for_favored_users=
+# wrong constant name after_add_for_favored_users?
+# wrong constant name after_add_for_favorites
+# wrong constant name after_add_for_favorites=
+# wrong constant name after_add_for_favorites?
+# wrong constant name after_add_for_taggings
+# wrong constant name after_add_for_taggings=
+# wrong constant name after_add_for_taggings?
+# wrong constant name after_add_for_tags
+# wrong constant name after_add_for_tags=
+# wrong constant name after_add_for_tags?
+# wrong constant name after_remove_for_comments
+# wrong constant name after_remove_for_comments=
+# wrong constant name after_remove_for_comments?
+# wrong constant name after_remove_for_favored_users
+# wrong constant name after_remove_for_favored_users=
+# wrong constant name after_remove_for_favored_users?
+# wrong constant name after_remove_for_favorites
+# wrong constant name after_remove_for_favorites=
+# wrong constant name after_remove_for_favorites?
+# wrong constant name after_remove_for_taggings
+# wrong constant name after_remove_for_taggings=
+# wrong constant name after_remove_for_taggings?
+# wrong constant name after_remove_for_tags
+# wrong constant name after_remove_for_tags=
+# wrong constant name after_remove_for_tags?
+# wrong constant name autosave_associated_records_for_author
+# wrong constant name autosave_associated_records_for_comments
+# wrong constant name autosave_associated_records_for_favored_users
+# wrong constant name autosave_associated_records_for_favorites
+# wrong constant name autosave_associated_records_for_taggings
+# wrong constant name autosave_associated_records_for_tags
+# wrong constant name before_add_for_comments
+# wrong constant name before_add_for_comments=
+# wrong constant name before_add_for_comments?
+# wrong constant name before_add_for_favored_users
+# wrong constant name before_add_for_favored_users=
+# wrong constant name before_add_for_favored_users?
+# wrong constant name before_add_for_favorites
+# wrong constant name before_add_for_favorites=
+# wrong constant name before_add_for_favorites?
+# wrong constant name before_add_for_taggings
+# wrong constant name before_add_for_taggings=
+# wrong constant name before_add_for_taggings?
+# wrong constant name before_add_for_tags
+# wrong constant name before_add_for_tags=
+# wrong constant name before_add_for_tags?
+# wrong constant name before_remove_for_comments
+# wrong constant name before_remove_for_comments=
+# wrong constant name before_remove_for_comments?
+# wrong constant name before_remove_for_favored_users
+# wrong constant name before_remove_for_favored_users=
+# wrong constant name before_remove_for_favored_users?
+# wrong constant name before_remove_for_favorites
+# wrong constant name before_remove_for_favorites=
+# wrong constant name before_remove_for_favorites?
+# wrong constant name before_remove_for_taggings
+# wrong constant name before_remove_for_taggings=
+# wrong constant name before_remove_for_taggings?
+# wrong constant name before_remove_for_tags
+# wrong constant name before_remove_for_tags=
+# wrong constant name before_remove_for_tags?
+# wrong constant name belongs_to_counter_cache_after_update
+# wrong constant name validate_associated_records_for_comments
+# wrong constant name validate_associated_records_for_favored_users
+# wrong constant name validate_associated_records_for_favorites
+# wrong constant name validate_associated_records_for_taggings
+# wrong constant name validate_associated_records_for_tags
+# A copy of Article::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Article::ActiveRecord_Relation has been removed from the module tree but is still active!
+# wrong constant name comment_ids=
+# wrong constant name favored_user_ids=
+# wrong constant name favorite_ids=
+# wrong constant name reload_author
+# wrong constant name tag_ids=
+# wrong constant name tagging_ids=
+# wrong constant name authored_by
+# wrong constant name favorited_by
+# wrong constant name tagged_with
+# wrong constant name <static-init>
+# wrong constant name after_add_for_comments
+# wrong constant name after_add_for_comments=
+# wrong constant name after_add_for_comments?
+# wrong constant name after_add_for_favored_users
+# wrong constant name after_add_for_favored_users=
+# wrong constant name after_add_for_favored_users?
+# wrong constant name after_add_for_favorites
+# wrong constant name after_add_for_favorites=
+# wrong constant name after_add_for_favorites?
+# wrong constant name after_add_for_taggings
+# wrong constant name after_add_for_taggings=
+# wrong constant name after_add_for_taggings?
+# wrong constant name after_add_for_tags
+# wrong constant name after_add_for_tags=
+# wrong constant name after_add_for_tags?
+# wrong constant name after_remove_for_comments
+# wrong constant name after_remove_for_comments=
+# wrong constant name after_remove_for_comments?
+# wrong constant name after_remove_for_favored_users
+# wrong constant name after_remove_for_favored_users=
+# wrong constant name after_remove_for_favored_users?
+# wrong constant name after_remove_for_favorites
+# wrong constant name after_remove_for_favorites=
+# wrong constant name after_remove_for_favorites?
+# wrong constant name after_remove_for_taggings
+# wrong constant name after_remove_for_taggings=
+# wrong constant name after_remove_for_taggings?
+# wrong constant name after_remove_for_tags
+# wrong constant name after_remove_for_tags=
+# wrong constant name after_remove_for_tags?
+# wrong constant name before_add_for_comments
+# wrong constant name before_add_for_comments=
+# wrong constant name before_add_for_comments?
+# wrong constant name before_add_for_favored_users
+# wrong constant name before_add_for_favored_users=
+# wrong constant name before_add_for_favored_users?
+# wrong constant name before_add_for_favorites
+# wrong constant name before_add_for_favorites=
+# wrong constant name before_add_for_favorites?
+# wrong constant name before_add_for_taggings
+# wrong constant name before_add_for_taggings=
+# wrong constant name before_add_for_taggings?
+# wrong constant name before_add_for_tags
+# wrong constant name before_add_for_tags=
+# wrong constant name before_add_for_tags?
+# wrong constant name before_remove_for_comments
+# wrong constant name before_remove_for_comments=
+# wrong constant name before_remove_for_comments?
+# wrong constant name before_remove_for_favored_users
+# wrong constant name before_remove_for_favored_users=
+# wrong constant name before_remove_for_favored_users?
+# wrong constant name before_remove_for_favorites
+# wrong constant name before_remove_for_favorites=
+# wrong constant name before_remove_for_favorites?
+# wrong constant name before_remove_for_taggings
+# wrong constant name before_remove_for_taggings=
+# wrong constant name before_remove_for_taggings?
+# wrong constant name before_remove_for_tags
+# wrong constant name before_remove_for_tags=
+# wrong constant name before_remove_for_tags?
+# wrong constant name inherited
+# wrong constant name inherited
 # wrong constant name <Class:BasicObject>
 # undefined method `read_nonblock<defaultArg>1' for class `BasicSocket'
 # undefined method `read_nonblock<defaultArg>2' for class `BasicSocket'
@@ -3604,6 +3781,60 @@
 # uninitialized constant Class::DELEGATION_RESERVED_METHOD_NAMES
 # uninitialized constant Class::RUBY_RESERVED_KEYWORDS
 # wrong constant name json_creatable?
+# uninitialized constant Comment::ACTIONS
+# uninitialized constant Comment::BLACKLISTED_CLASS_METHODS
+# uninitialized constant Comment::CALLBACKS
+# uninitialized constant Comment::CALLBACK_FILTER_TYPES
+# uninitialized constant Comment::CALL_COMPILABLE_REGEXP
+# wrong constant name <Class:GeneratedRelationMethods>
+# uninitialized constant Comment::MAX_PASSWORD_LENGTH_ALLOWED
+# uninitialized constant Comment::NAME_COMPILABLE_REGEXP
+# uninitialized constant Comment::UNASSIGNABLE_KEYS
+# wrong constant name autosave_associated_records_for_article
+# wrong constant name autosave_associated_records_for_user
+# wrong constant name belongs_to_counter_cache_after_update
+# A copy of Comment::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Comment::ActiveRecord_Relation has been removed from the module tree but is still active!
+# wrong constant name reload_article
+# wrong constant name reload_user
+# wrong constant name <static-init>
 # uninitialized constant Concurrent::AbstractExecutorService::DEBUG
 # uninitialized constant Concurrent::AbstractExecutorService::ERROR
 # uninitialized constant Concurrent::AbstractExecutorService::FATAL
@@ -4068,6 +4299,60 @@
 # wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name <static-init>
+# uninitialized constant Favorite::ACTIONS
+# uninitialized constant Favorite::BLACKLISTED_CLASS_METHODS
+# uninitialized constant Favorite::CALLBACKS
+# uninitialized constant Favorite::CALLBACK_FILTER_TYPES
+# uninitialized constant Favorite::CALL_COMPILABLE_REGEXP
+# wrong constant name <Class:GeneratedRelationMethods>
+# uninitialized constant Favorite::MAX_PASSWORD_LENGTH_ALLOWED
+# uninitialized constant Favorite::NAME_COMPILABLE_REGEXP
+# uninitialized constant Favorite::UNASSIGNABLE_KEYS
+# wrong constant name autosave_associated_records_for_article
+# wrong constant name autosave_associated_records_for_user
+# wrong constant name belongs_to_counter_cache_after_update
+# A copy of Favorite::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Favorite::ActiveRecord_Relation has been removed from the module tree but is still active!
+# wrong constant name reload_article
+# wrong constant name reload_user
+# wrong constant name <static-init>
 # wrong constant name transfer
 # wrong constant name current
 # uninitialized constant Fiddle
@@ -4092,11 +4377,73 @@
 # uninitialized constant Float::MEGABYTE
 # uninitialized constant Float::PETABYTE
 # uninitialized constant Float::TERABYTE
+# uninitialized constant Follow::ACTIONS
+# uninitialized constant Follow::BLACKLISTED_CLASS_METHODS
+# uninitialized constant Follow::CALLBACKS
+# uninitialized constant Follow::CALLBACK_FILTER_TYPES
+# uninitialized constant Follow::CALL_COMPILABLE_REGEXP
+# wrong constant name <Class:GeneratedRelationMethods>
+# uninitialized constant Follow::MAX_PASSWORD_LENGTH_ALLOWED
+# uninitialized constant Follow::NAME_COMPILABLE_REGEXP
+# uninitialized constant Follow::UNASSIGNABLE_KEYS
+# wrong constant name autosave_associated_records_for_follower
+# wrong constant name autosave_associated_records_for_following
+# wrong constant name belongs_to_counter_cache_after_update
+# A copy of Follow::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Follow::ActiveRecord_Relation has been removed from the module tree but is still active!
+# wrong constant name reload_follower
+# wrong constant name reload_following
+# wrong constant name <static-init>
 # wrong constant name _compile_method
 # wrong constant name _delegator_method
 # wrong constant name _valid_method?
 # wrong constant name debug
 # wrong constant name debug=
+# uninitialized constant FriendlyId::Slug::ACTIONS
+# uninitialized constant FriendlyId::Slug::BLACKLISTED_CLASS_METHODS
+# uninitialized constant FriendlyId::Slug::CALLBACKS
+# uninitialized constant FriendlyId::Slug::CALLBACK_FILTER_TYPES
+# uninitialized constant FriendlyId::Slug::CALL_COMPILABLE_REGEXP
+# uninitialized constant FriendlyId::Slug::MAX_PASSWORD_LENGTH_ALLOWED
+# uninitialized constant FriendlyId::Slug::NAME_COMPILABLE_REGEXP
+# uninitialized constant FriendlyId::Slug::UNASSIGNABLE_KEYS
 # wrong constant name garbage_collect
 # wrong constant name verify_transient_heap_internal_consistency
 # uninitialized constant GDBM
@@ -7937,10 +8284,11 @@
 # uninitialized constant Rails::Generators::TestCase::TEARDOWN_METHODS
 # uninitialized constant Rails::Generators::TestCase::UNDEFINED
 # uninitialized constant Rails::Generators::TestCase::UNTRACKED
+# uninitialized constant Rails::Generators::TestCase::USER_CONFIG
 # uninitialized constant Rails::Generators::TestCase::VERSION
 # wrong constant name properties
 # wrong constant name properties=
-# undefined singleton method `property<defaultArg>1' for `#<Module:0x0000560545b1c038>'
+# undefined singleton method `property<defaultArg>1' for `#<Module:0x000055e34d6d6e20>'
 # wrong constant name <static-init>
 # wrong constant name properties
 # wrong constant name properties=
@@ -8987,7 +9335,7 @@
 # uninitialized constant Sass::SCSS::Parser::ANY
 # uninitialized constant Sass::SCSS::Parser::CDC
 # uninitialized constant Sass::SCSS::Parser::CDO
-# uninitialized constant Sass::SCSS::Parser::COMMENT
+# Unable to autoload constant COMMENT, expected /home/pbminh/tests/real_world_app/app/models/comment.rb to define it
 # uninitialized constant Sass::SCSS::Parser::DASHMATCH
 # uninitialized constant Sass::SCSS::Parser::DOMAIN
 # uninitialized constant Sass::SCSS::Parser::ESCAPE
@@ -9041,7 +9389,7 @@
 # uninitialized constant Sass::SCSS::StaticParser::ANY
 # uninitialized constant Sass::SCSS::StaticParser::CDC
 # uninitialized constant Sass::SCSS::StaticParser::CDO
-# uninitialized constant Sass::SCSS::StaticParser::COMMENT
+# Unable to autoload constant COMMENT, expected /home/pbminh/tests/real_world_app/app/models/comment.rb to define it
 # uninitialized constant Sass::SCSS::StaticParser::DASHMATCH
 # uninitialized constant Sass::SCSS::StaticParser::DIRECTIVES
 # uninitialized constant Sass::SCSS::StaticParser::DOMAIN
@@ -9101,7 +9449,7 @@
 # uninitialized constant Sass::Script::Lexer::ANY
 # uninitialized constant Sass::Script::Lexer::CDC
 # uninitialized constant Sass::Script::Lexer::CDO
-# uninitialized constant Sass::Script::Lexer::COMMENT
+# Unable to autoload constant COMMENT, expected /home/pbminh/tests/real_world_app/app/models/comment.rb to define it
 # uninitialized constant Sass::Script::Lexer::DASHMATCH
 # uninitialized constant Sass::Script::Lexer::DOMAIN
 # uninitialized constant Sass::Script::Lexer::ESCAPE
@@ -9337,6 +9685,163 @@
 # wrong constant name T.noreturn
 # wrong constant name T.noreturn
 # wrong constant name T.untyped
+# uninitialized constant Tag::ACTIONS
+# uninitialized constant Tag::BLACKLISTED_CLASS_METHODS
+# uninitialized constant Tag::CALLBACKS
+# uninitialized constant Tag::CALLBACK_FILTER_TYPES
+# uninitialized constant Tag::CALL_COMPILABLE_REGEXP
+# wrong constant name <Class:GeneratedRelationMethods>
+# uninitialized constant Tag::MAX_PASSWORD_LENGTH_ALLOWED
+# uninitialized constant Tag::NAME_COMPILABLE_REGEXP
+# uninitialized constant Tag::UNASSIGNABLE_KEYS
+# wrong constant name after_add_for_articles
+# wrong constant name after_add_for_articles=
+# wrong constant name after_add_for_articles?
+# wrong constant name after_add_for_taggings
+# wrong constant name after_add_for_taggings=
+# wrong constant name after_add_for_taggings?
+# wrong constant name after_remove_for_articles
+# wrong constant name after_remove_for_articles=
+# wrong constant name after_remove_for_articles?
+# wrong constant name after_remove_for_taggings
+# wrong constant name after_remove_for_taggings=
+# wrong constant name after_remove_for_taggings?
+# wrong constant name autosave_associated_records_for_articles
+# wrong constant name autosave_associated_records_for_taggings
+# wrong constant name before_add_for_articles
+# wrong constant name before_add_for_articles=
+# wrong constant name before_add_for_articles?
+# wrong constant name before_add_for_taggings
+# wrong constant name before_add_for_taggings=
+# wrong constant name before_add_for_taggings?
+# wrong constant name before_remove_for_articles
+# wrong constant name before_remove_for_articles=
+# wrong constant name before_remove_for_articles?
+# wrong constant name before_remove_for_taggings
+# wrong constant name before_remove_for_taggings=
+# wrong constant name before_remove_for_taggings?
+# wrong constant name validate_associated_records_for_articles
+# wrong constant name validate_associated_records_for_taggings
+# A copy of Tag::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tag::ActiveRecord_Relation has been removed from the module tree but is still active!
+# wrong constant name article_ids=
+# wrong constant name tagging_ids=
+# wrong constant name <static-init>
+# wrong constant name after_add_for_articles
+# wrong constant name after_add_for_articles=
+# wrong constant name after_add_for_articles?
+# wrong constant name after_add_for_taggings
+# wrong constant name after_add_for_taggings=
+# wrong constant name after_add_for_taggings?
+# wrong constant name after_remove_for_articles
+# wrong constant name after_remove_for_articles=
+# wrong constant name after_remove_for_articles?
+# wrong constant name after_remove_for_taggings
+# wrong constant name after_remove_for_taggings=
+# wrong constant name after_remove_for_taggings?
+# wrong constant name before_add_for_articles
+# wrong constant name before_add_for_articles=
+# wrong constant name before_add_for_articles?
+# wrong constant name before_add_for_taggings
+# wrong constant name before_add_for_taggings=
+# wrong constant name before_add_for_taggings?
+# wrong constant name before_remove_for_articles
+# wrong constant name before_remove_for_articles=
+# wrong constant name before_remove_for_articles?
+# wrong constant name before_remove_for_taggings
+# wrong constant name before_remove_for_taggings=
+# wrong constant name before_remove_for_taggings?
+# uninitialized constant Tagging::ACTIONS
+# uninitialized constant Tagging::BLACKLISTED_CLASS_METHODS
+# uninitialized constant Tagging::CALLBACKS
+# uninitialized constant Tagging::CALLBACK_FILTER_TYPES
+# uninitialized constant Tagging::CALL_COMPILABLE_REGEXP
+# wrong constant name <Class:GeneratedRelationMethods>
+# uninitialized constant Tagging::MAX_PASSWORD_LENGTH_ALLOWED
+# uninitialized constant Tagging::NAME_COMPILABLE_REGEXP
+# uninitialized constant Tagging::UNASSIGNABLE_KEYS
+# wrong constant name autosave_associated_records_for_article
+# wrong constant name autosave_associated_records_for_tag
+# wrong constant name belongs_to_counter_cache_after_update
+# A copy of Tagging::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Associations_CollectionProxy has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Relation has been removed from the module tree but is still active!
+# A copy of Tagging::ActiveRecord_Relation has been removed from the module tree but is still active!
+# wrong constant name reload_article
+# wrong constant name reload_tag
+# wrong constant name <static-init>
 # wrong constant name <Class:Remover>
 # wrong constant name _close
 # wrong constant name inspect
@@ -9647,18 +10152,129 @@
 # uninitialized constant User::CALLBACKS
 # uninitialized constant User::CALLBACK_FILTER_TYPES
 # uninitialized constant User::CALL_COMPILABLE_REGEXP
-# wrong constant name <Class:GeneratedAssociationMethods>
 # wrong constant name <Class:GeneratedRelationMethods>
 # uninitialized constant User::MAX_PASSWORD_LENGTH_ALLOWED
 # uninitialized constant User::NAME_COMPILABLE_REGEXP
 # uninitialized constant User::UNASSIGNABLE_KEYS
 # uninitialized constant User::VALIDATIONS
+# wrong constant name after_add_for_articles
+# wrong constant name after_add_for_articles=
+# wrong constant name after_add_for_articles?
+# wrong constant name after_add_for_comments
+# wrong constant name after_add_for_comments=
+# wrong constant name after_add_for_comments?
+# wrong constant name after_add_for_favorited_articles
+# wrong constant name after_add_for_favorited_articles=
+# wrong constant name after_add_for_favorited_articles?
+# wrong constant name after_add_for_favorites
+# wrong constant name after_add_for_favorites=
+# wrong constant name after_add_for_favorites?
+# wrong constant name after_add_for_follower_follows
+# wrong constant name after_add_for_follower_follows=
+# wrong constant name after_add_for_follower_follows?
+# wrong constant name after_add_for_followers
+# wrong constant name after_add_for_followers=
+# wrong constant name after_add_for_followers?
+# wrong constant name after_add_for_following_follows
+# wrong constant name after_add_for_following_follows=
+# wrong constant name after_add_for_following_follows?
+# wrong constant name after_add_for_followings
+# wrong constant name after_add_for_followings=
+# wrong constant name after_add_for_followings?
+# wrong constant name after_remove_for_articles
+# wrong constant name after_remove_for_articles=
+# wrong constant name after_remove_for_articles?
+# wrong constant name after_remove_for_comments
+# wrong constant name after_remove_for_comments=
+# wrong constant name after_remove_for_comments?
+# wrong constant name after_remove_for_favorited_articles
+# wrong constant name after_remove_for_favorited_articles=
+# wrong constant name after_remove_for_favorited_articles?
+# wrong constant name after_remove_for_favorites
+# wrong constant name after_remove_for_favorites=
+# wrong constant name after_remove_for_favorites?
+# wrong constant name after_remove_for_follower_follows
+# wrong constant name after_remove_for_follower_follows=
+# wrong constant name after_remove_for_follower_follows?
+# wrong constant name after_remove_for_followers
+# wrong constant name after_remove_for_followers=
+# wrong constant name after_remove_for_followers?
+# wrong constant name after_remove_for_following_follows
+# wrong constant name after_remove_for_following_follows=
+# wrong constant name after_remove_for_following_follows?
+# wrong constant name after_remove_for_followings
+# wrong constant name after_remove_for_followings=
+# wrong constant name after_remove_for_followings?
+# wrong constant name autosave_associated_records_for_articles
+# wrong constant name autosave_associated_records_for_comments
+# wrong constant name autosave_associated_records_for_favorited_articles
+# wrong constant name autosave_associated_records_for_favorites
+# wrong constant name autosave_associated_records_for_follower_follows
+# wrong constant name autosave_associated_records_for_followers
+# wrong constant name autosave_associated_records_for_following_follows
+# wrong constant name autosave_associated_records_for_followings
+# wrong constant name before_add_for_articles
+# wrong constant name before_add_for_articles=
+# wrong constant name before_add_for_articles?
+# wrong constant name before_add_for_comments
+# wrong constant name before_add_for_comments=
+# wrong constant name before_add_for_comments?
+# wrong constant name before_add_for_favorited_articles
+# wrong constant name before_add_for_favorited_articles=
+# wrong constant name before_add_for_favorited_articles?
+# wrong constant name before_add_for_favorites
+# wrong constant name before_add_for_favorites=
+# wrong constant name before_add_for_favorites?
+# wrong constant name before_add_for_follower_follows
+# wrong constant name before_add_for_follower_follows=
+# wrong constant name before_add_for_follower_follows?
+# wrong constant name before_add_for_followers
+# wrong constant name before_add_for_followers=
+# wrong constant name before_add_for_followers?
+# wrong constant name before_add_for_following_follows
+# wrong constant name before_add_for_following_follows=
+# wrong constant name before_add_for_following_follows?
+# wrong constant name before_add_for_followings
+# wrong constant name before_add_for_followings=
+# wrong constant name before_add_for_followings?
+# wrong constant name before_remove_for_articles
+# wrong constant name before_remove_for_articles=
+# wrong constant name before_remove_for_articles?
+# wrong constant name before_remove_for_comments
+# wrong constant name before_remove_for_comments=
+# wrong constant name before_remove_for_comments?
+# wrong constant name before_remove_for_favorited_articles
+# wrong constant name before_remove_for_favorited_articles=
+# wrong constant name before_remove_for_favorited_articles?
+# wrong constant name before_remove_for_favorites
+# wrong constant name before_remove_for_favorites=
+# wrong constant name before_remove_for_favorites?
+# wrong constant name before_remove_for_follower_follows
+# wrong constant name before_remove_for_follower_follows=
+# wrong constant name before_remove_for_follower_follows?
+# wrong constant name before_remove_for_followers
+# wrong constant name before_remove_for_followers=
+# wrong constant name before_remove_for_followers?
+# wrong constant name before_remove_for_following_follows
+# wrong constant name before_remove_for_following_follows=
+# wrong constant name before_remove_for_following_follows?
+# wrong constant name before_remove_for_followings
+# wrong constant name before_remove_for_followings=
+# wrong constant name before_remove_for_followings?
 # wrong constant name current_password
 # wrong constant name devise_modules
 # wrong constant name devise_modules?
 # wrong constant name password
 # wrong constant name password_confirmation
 # wrong constant name password_confirmation=
+# wrong constant name validate_associated_records_for_articles
+# wrong constant name validate_associated_records_for_comments
+# wrong constant name validate_associated_records_for_favorited_articles
+# wrong constant name validate_associated_records_for_favorites
+# wrong constant name validate_associated_records_for_follower_follows
+# wrong constant name validate_associated_records_for_followers
+# wrong constant name validate_associated_records_for_following_follows
+# wrong constant name validate_associated_records_for_followings
 # A copy of User::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
 # A copy of User::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
 # A copy of User::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
@@ -9698,8 +10314,111 @@
 # A copy of User::ActiveRecord_Relation has been removed from the module tree but is still active!
 # A copy of User::ActiveRecord_Relation has been removed from the module tree but is still active!
 # A copy of User::ActiveRecord_Relation has been removed from the module tree but is still active!
+# wrong constant name article_ids=
+# wrong constant name comment_ids=
+# wrong constant name favorite_ids=
+# wrong constant name favorited_article_ids=
+# wrong constant name follower_follow_ids=
+# wrong constant name follower_ids=
+# wrong constant name following_follow_ids=
+# wrong constant name following_ids=
 # wrong constant name <static-init>
-# wrong constant name <static-init>
+# wrong constant name after_add_for_articles
+# wrong constant name after_add_for_articles=
+# wrong constant name after_add_for_articles?
+# wrong constant name after_add_for_comments
+# wrong constant name after_add_for_comments=
+# wrong constant name after_add_for_comments?
+# wrong constant name after_add_for_favorited_articles
+# wrong constant name after_add_for_favorited_articles=
+# wrong constant name after_add_for_favorited_articles?
+# wrong constant name after_add_for_favorites
+# wrong constant name after_add_for_favorites=
+# wrong constant name after_add_for_favorites?
+# wrong constant name after_add_for_follower_follows
+# wrong constant name after_add_for_follower_follows=
+# wrong constant name after_add_for_follower_follows?
+# wrong constant name after_add_for_followers
+# wrong constant name after_add_for_followers=
+# wrong constant name after_add_for_followers?
+# wrong constant name after_add_for_following_follows
+# wrong constant name after_add_for_following_follows=
+# wrong constant name after_add_for_following_follows?
+# wrong constant name after_add_for_followings
+# wrong constant name after_add_for_followings=
+# wrong constant name after_add_for_followings?
+# wrong constant name after_remove_for_articles
+# wrong constant name after_remove_for_articles=
+# wrong constant name after_remove_for_articles?
+# wrong constant name after_remove_for_comments
+# wrong constant name after_remove_for_comments=
+# wrong constant name after_remove_for_comments?
+# wrong constant name after_remove_for_favorited_articles
+# wrong constant name after_remove_for_favorited_articles=
+# wrong constant name after_remove_for_favorited_articles?
+# wrong constant name after_remove_for_favorites
+# wrong constant name after_remove_for_favorites=
+# wrong constant name after_remove_for_favorites?
+# wrong constant name after_remove_for_follower_follows
+# wrong constant name after_remove_for_follower_follows=
+# wrong constant name after_remove_for_follower_follows?
+# wrong constant name after_remove_for_followers
+# wrong constant name after_remove_for_followers=
+# wrong constant name after_remove_for_followers?
+# wrong constant name after_remove_for_following_follows
+# wrong constant name after_remove_for_following_follows=
+# wrong constant name after_remove_for_following_follows?
+# wrong constant name after_remove_for_followings
+# wrong constant name after_remove_for_followings=
+# wrong constant name after_remove_for_followings?
+# wrong constant name before_add_for_articles
+# wrong constant name before_add_for_articles=
+# wrong constant name before_add_for_articles?
+# wrong constant name before_add_for_comments
+# wrong constant name before_add_for_comments=
+# wrong constant name before_add_for_comments?
+# wrong constant name before_add_for_favorited_articles
+# wrong constant name before_add_for_favorited_articles=
+# wrong constant name before_add_for_favorited_articles?
+# wrong constant name before_add_for_favorites
+# wrong constant name before_add_for_favorites=
+# wrong constant name before_add_for_favorites?
+# wrong constant name before_add_for_follower_follows
+# wrong constant name before_add_for_follower_follows=
+# wrong constant name before_add_for_follower_follows?
+# wrong constant name before_add_for_followers
+# wrong constant name before_add_for_followers=
+# wrong constant name before_add_for_followers?
+# wrong constant name before_add_for_following_follows
+# wrong constant name before_add_for_following_follows=
+# wrong constant name before_add_for_following_follows?
+# wrong constant name before_add_for_followings
+# wrong constant name before_add_for_followings=
+# wrong constant name before_add_for_followings?
+# wrong constant name before_remove_for_articles
+# wrong constant name before_remove_for_articles=
+# wrong constant name before_remove_for_articles?
+# wrong constant name before_remove_for_comments
+# wrong constant name before_remove_for_comments=
+# wrong constant name before_remove_for_comments?
+# wrong constant name before_remove_for_favorited_articles
+# wrong constant name before_remove_for_favorited_articles=
+# wrong constant name before_remove_for_favorited_articles?
+# wrong constant name before_remove_for_favorites
+# wrong constant name before_remove_for_favorites=
+# wrong constant name before_remove_for_favorites?
+# wrong constant name before_remove_for_follower_follows
+# wrong constant name before_remove_for_follower_follows=
+# wrong constant name before_remove_for_follower_follows?
+# wrong constant name before_remove_for_followers
+# wrong constant name before_remove_for_followers=
+# wrong constant name before_remove_for_followers?
+# wrong constant name before_remove_for_following_follows
+# wrong constant name before_remove_for_following_follows=
+# wrong constant name before_remove_for_following_follows?
+# wrong constant name before_remove_for_followings
+# wrong constant name before_remove_for_followings=
+# wrong constant name before_remove_for_followings?
 # wrong constant name devise_modules
 # wrong constant name devise_modules=
 # wrong constant name devise_modules?

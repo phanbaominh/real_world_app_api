@@ -8,14 +8,15 @@ module ::Anonymous_Delegator_16; end
 module ::Anonymous_Delegator_17; end
 module ::Anonymous_Delegator_18; end
 module ::Anonymous_Delegator_2; end
-module ::Anonymous_Delegator_33; end
 module ::Anonymous_Delegator_34; end
+module ::Anonymous_Delegator_35; end
 module ::Anonymous_Delegator_6; end
 module ActiveStorage::Blob::Analyzable; end
 module ActiveStorage::Blob::Identifiable; end
 module ActiveStorage::Variant; end
 module Anonymous_Module_32::Anonymous_Module_30; end
 module Anonymous_Module_32::Anonymous_Module_31; end
+module Article::Number; end
 module GeneratedUrlHelpers::Anonymous_Module_30; end
 module GeneratedUrlHelpers::Anonymous_Module_31; end
 module OrmAdapter::ActiveRecord::ToAdapter; end

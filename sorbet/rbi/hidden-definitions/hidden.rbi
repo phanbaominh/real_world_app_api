@@ -1651,33 +1651,8 @@ class ActiveRecord::Associations::Builder::Association
   VALID_OPTIONS = ::T.let(nil, ::T.untyped)
 end
 
-class ActiveRecord::Associations::Builder::BelongsTo
-end
-
-class ActiveRecord::Associations::Builder::BelongsTo
-  def self.add_counter_cache_callbacks(model, reflection); end
-
-  def self.add_counter_cache_methods(mixin); end
-
-  def self.add_default_callbacks(model, reflection); end
-
-  def self.add_touch_callbacks(model, reflection); end
-
-  def self.define_accessors(mixin, reflection); end
-
-  def self.touch_record(o, changes, foreign_key, name, touch, touch_method); end
-end
-
 class ActiveRecord::Associations::Builder::CollectionAssociation
   CALLBACKS = ::T.let(nil, ::T.untyped)
-end
-
-class ActiveRecord::Associations::Builder::CollectionAssociation
-  def self.define_callback(model, callback_name, name, options); end
-
-  def self.define_extensions(model, name, &block); end
-
-  def self.wrap_scope(scope, mod); end
 end
 
 class ActiveRecord::Associations::Builder::HasAndBelongsToMany
@@ -1725,23 +1700,10 @@ end
 class ActiveRecord::Associations::Builder::HasAndBelongsToMany
 end
 
-class ActiveRecord::Associations::Builder::HasMany
-end
-
-class ActiveRecord::Associations::Builder::HasMany
-end
-
 class ActiveRecord::Associations::Builder::HasOne
 end
 
 class ActiveRecord::Associations::Builder::HasOne
-end
-
-class ActiveRecord::Associations::Builder::SingularAssociation
-end
-
-class ActiveRecord::Associations::Builder::SingularAssociation
-  def self.define_constructors(mixin, name); end
 end
 
 class ActiveRecord::Associations::CollectionAssociation
@@ -3297,6 +3259,11 @@ class Addrinfo
   def connect_internal(local_addrinfo, timeout=T.unsafe(nil)); end
 end
 
+class ApplicationController
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
 class ApplicationRecord
   include ::ApplicationRecord::GeneratedAssociationMethods
   RelationType = ::T.let(nil, ::T.untyped)
@@ -3430,6 +3397,340 @@ end
 
 class Array
   def self.try_convert(_); end
+end
+
+class Article
+  include ::FriendlyId::Reserved
+  include ::FriendlyId::Model
+  include ::FriendlyId::Slugged
+  def after_add_for_comments(); end
+
+  def after_add_for_comments=(val); end
+
+  def after_add_for_comments?(); end
+
+  def after_add_for_favored_users(); end
+
+  def after_add_for_favored_users=(val); end
+
+  def after_add_for_favored_users?(); end
+
+  def after_add_for_favorites(); end
+
+  def after_add_for_favorites=(val); end
+
+  def after_add_for_favorites?(); end
+
+  def after_add_for_taggings(); end
+
+  def after_add_for_taggings=(val); end
+
+  def after_add_for_taggings?(); end
+
+  def after_add_for_tags(); end
+
+  def after_add_for_tags=(val); end
+
+  def after_add_for_tags?(); end
+
+  def after_remove_for_comments(); end
+
+  def after_remove_for_comments=(val); end
+
+  def after_remove_for_comments?(); end
+
+  def after_remove_for_favored_users(); end
+
+  def after_remove_for_favored_users=(val); end
+
+  def after_remove_for_favored_users?(); end
+
+  def after_remove_for_favorites(); end
+
+  def after_remove_for_favorites=(val); end
+
+  def after_remove_for_favorites?(); end
+
+  def after_remove_for_taggings(); end
+
+  def after_remove_for_taggings=(val); end
+
+  def after_remove_for_taggings?(); end
+
+  def after_remove_for_tags(); end
+
+  def after_remove_for_tags=(val); end
+
+  def after_remove_for_tags?(); end
+
+  def autosave_associated_records_for_author(*args); end
+
+  def autosave_associated_records_for_comments(*args); end
+
+  def autosave_associated_records_for_favored_users(*args); end
+
+  def autosave_associated_records_for_favorites(*args); end
+
+  def autosave_associated_records_for_taggings(*args); end
+
+  def autosave_associated_records_for_tags(*args); end
+
+  def before_add_for_comments(); end
+
+  def before_add_for_comments=(val); end
+
+  def before_add_for_comments?(); end
+
+  def before_add_for_favored_users(); end
+
+  def before_add_for_favored_users=(val); end
+
+  def before_add_for_favored_users?(); end
+
+  def before_add_for_favorites(); end
+
+  def before_add_for_favorites=(val); end
+
+  def before_add_for_favorites?(); end
+
+  def before_add_for_taggings(); end
+
+  def before_add_for_taggings=(val); end
+
+  def before_add_for_taggings?(); end
+
+  def before_add_for_tags(); end
+
+  def before_add_for_tags=(val); end
+
+  def before_add_for_tags?(); end
+
+  def before_remove_for_comments(); end
+
+  def before_remove_for_comments=(val); end
+
+  def before_remove_for_comments?(); end
+
+  def before_remove_for_favored_users(); end
+
+  def before_remove_for_favored_users=(val); end
+
+  def before_remove_for_favored_users?(); end
+
+  def before_remove_for_favorites(); end
+
+  def before_remove_for_favorites=(val); end
+
+  def before_remove_for_favorites?(); end
+
+  def before_remove_for_taggings(); end
+
+  def before_remove_for_taggings=(val); end
+
+  def before_remove_for_taggings?(); end
+
+  def before_remove_for_tags(); end
+
+  def before_remove_for_tags=(val); end
+
+  def before_remove_for_tags?(); end
+
+  def belongs_to_counter_cache_after_update(reflection); end
+
+  def validate_associated_records_for_comments(*args); end
+
+  def validate_associated_records_for_favored_users(*args); end
+
+  def validate_associated_records_for_favorites(*args); end
+
+  def validate_associated_records_for_taggings(*args); end
+
+  def validate_associated_records_for_tags(*args); end
+end
+
+class Article::ActiveRecord_AssociationRelation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Article::GeneratedRelationMethods
+end
+
+class Article::ActiveRecord_AssociationRelation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class Article::ActiveRecord_Associations_CollectionProxy
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Article::GeneratedRelationMethods
+end
+
+class Article::ActiveRecord_Associations_CollectionProxy
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class Article::ActiveRecord_Relation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Article::GeneratedRelationMethods
+end
+
+class Article::ActiveRecord_Relation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+module Article::GeneratedAssociationMethods
+  def comment_ids=(ids); end
+
+  def favored_user_ids=(ids); end
+
+  def favorite_ids=(ids); end
+
+  def reload_author(); end
+
+  def tag_ids=(ids); end
+
+  def tagging_ids=(ids); end
+end
+
+module Article::GeneratedRelationMethods
+  def authored_by(*args, &block); end
+
+  def favorited_by(*args, &block); end
+
+  def tagged_with(*args, &block); end
+end
+
+module Article::GeneratedRelationMethods
+end
+
+class Article
+  extend ::FriendlyId::Base
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+  def self.after_add_for_comments(); end
+
+  def self.after_add_for_comments=(val); end
+
+  def self.after_add_for_comments?(); end
+
+  def self.after_add_for_favored_users(); end
+
+  def self.after_add_for_favored_users=(val); end
+
+  def self.after_add_for_favored_users?(); end
+
+  def self.after_add_for_favorites(); end
+
+  def self.after_add_for_favorites=(val); end
+
+  def self.after_add_for_favorites?(); end
+
+  def self.after_add_for_taggings(); end
+
+  def self.after_add_for_taggings=(val); end
+
+  def self.after_add_for_taggings?(); end
+
+  def self.after_add_for_tags(); end
+
+  def self.after_add_for_tags=(val); end
+
+  def self.after_add_for_tags?(); end
+
+  def self.after_remove_for_comments(); end
+
+  def self.after_remove_for_comments=(val); end
+
+  def self.after_remove_for_comments?(); end
+
+  def self.after_remove_for_favored_users(); end
+
+  def self.after_remove_for_favored_users=(val); end
+
+  def self.after_remove_for_favored_users?(); end
+
+  def self.after_remove_for_favorites(); end
+
+  def self.after_remove_for_favorites=(val); end
+
+  def self.after_remove_for_favorites?(); end
+
+  def self.after_remove_for_taggings(); end
+
+  def self.after_remove_for_taggings=(val); end
+
+  def self.after_remove_for_taggings?(); end
+
+  def self.after_remove_for_tags(); end
+
+  def self.after_remove_for_tags=(val); end
+
+  def self.after_remove_for_tags?(); end
+
+  def self.before_add_for_comments(); end
+
+  def self.before_add_for_comments=(val); end
+
+  def self.before_add_for_comments?(); end
+
+  def self.before_add_for_favored_users(); end
+
+  def self.before_add_for_favored_users=(val); end
+
+  def self.before_add_for_favored_users?(); end
+
+  def self.before_add_for_favorites(); end
+
+  def self.before_add_for_favorites=(val); end
+
+  def self.before_add_for_favorites?(); end
+
+  def self.before_add_for_taggings(); end
+
+  def self.before_add_for_taggings=(val); end
+
+  def self.before_add_for_taggings?(); end
+
+  def self.before_add_for_tags(); end
+
+  def self.before_add_for_tags=(val); end
+
+  def self.before_add_for_tags?(); end
+
+  def self.before_remove_for_comments(); end
+
+  def self.before_remove_for_comments=(val); end
+
+  def self.before_remove_for_comments?(); end
+
+  def self.before_remove_for_favored_users(); end
+
+  def self.before_remove_for_favored_users=(val); end
+
+  def self.before_remove_for_favored_users?(); end
+
+  def self.before_remove_for_favorites(); end
+
+  def self.before_remove_for_favorites=(val); end
+
+  def self.before_remove_for_favorites?(); end
+
+  def self.before_remove_for_taggings(); end
+
+  def self.before_remove_for_taggings=(val); end
+
+  def self.before_remove_for_taggings?(); end
+
+  def self.before_remove_for_tags(); end
+
+  def self.before_remove_for_tags=(val); end
+
+  def self.before_remove_for_tags?(); end
+end
+
+class ArticlesController::ArticleFields
+  def self.inherited(s); end
+end
+
+class ArticlesController::ArticleParams
+  def self.inherited(s); end
 end
 
 class BCrypt::Engine
@@ -6450,6 +6751,53 @@ module CoffeeScript::Source
   COMPILE_FUNCTION_SOURCE = ::T.let(nil, ::T.untyped)
 end
 
+class Comment
+  def autosave_associated_records_for_article(*args); end
+
+  def autosave_associated_records_for_user(*args); end
+
+  def belongs_to_counter_cache_after_update(reflection); end
+end
+
+class Comment::ActiveRecord_AssociationRelation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Comment::GeneratedRelationMethods
+end
+
+class Comment::ActiveRecord_AssociationRelation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class Comment::ActiveRecord_Associations_CollectionProxy
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Comment::GeneratedRelationMethods
+end
+
+class Comment::ActiveRecord_Associations_CollectionProxy
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class Comment::ActiveRecord_Relation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Comment::GeneratedRelationMethods
+end
+
+class Comment::ActiveRecord_Relation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+module Comment::GeneratedAssociationMethods
+  def reload_article(); end
+
+  def reload_user(); end
+end
+
+module Comment::GeneratedRelationMethods
+end
+
+module Comment::GeneratedRelationMethods
+end
+
 module Concurrent
   NULL = ::T.let(nil, ::T.untyped)
   NULL_LOGGER = ::T.let(nil, ::T.untyped)
@@ -7638,6 +7986,53 @@ class FalseClass
   include ::JSON::Ext::Generator::GeneratorMethods::FalseClass
 end
 
+class Favorite
+  def autosave_associated_records_for_article(*args); end
+
+  def autosave_associated_records_for_user(*args); end
+
+  def belongs_to_counter_cache_after_update(reflection); end
+end
+
+class Favorite::ActiveRecord_AssociationRelation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Favorite::GeneratedRelationMethods
+end
+
+class Favorite::ActiveRecord_AssociationRelation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class Favorite::ActiveRecord_Associations_CollectionProxy
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Favorite::GeneratedRelationMethods
+end
+
+class Favorite::ActiveRecord_Associations_CollectionProxy
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class Favorite::ActiveRecord_Relation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Favorite::GeneratedRelationMethods
+end
+
+class Favorite::ActiveRecord_Relation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+module Favorite::GeneratedAssociationMethods
+  def reload_article(); end
+
+  def reload_user(); end
+end
+
+module Favorite::GeneratedRelationMethods
+end
+
+module Favorite::GeneratedRelationMethods
+end
+
 class Fiber
   def transfer(*_); end
 end
@@ -7706,6 +8101,53 @@ class Float
   include ::ActiveSupport::NumericWithFormat
 end
 
+class Follow
+  def autosave_associated_records_for_follower(*args); end
+
+  def autosave_associated_records_for_following(*args); end
+
+  def belongs_to_counter_cache_after_update(reflection); end
+end
+
+class Follow::ActiveRecord_AssociationRelation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Follow::GeneratedRelationMethods
+end
+
+class Follow::ActiveRecord_AssociationRelation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class Follow::ActiveRecord_Associations_CollectionProxy
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Follow::GeneratedRelationMethods
+end
+
+class Follow::ActiveRecord_Associations_CollectionProxy
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class Follow::ActiveRecord_Relation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Follow::GeneratedRelationMethods
+end
+
+class Follow::ActiveRecord_Relation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+module Follow::GeneratedAssociationMethods
+  def reload_follower(); end
+
+  def reload_following(); end
+end
+
+module Follow::GeneratedRelationMethods
+end
+
+module Follow::GeneratedRelationMethods
+end
+
 module Forwardable
   VERSION = ::T.let(nil, ::T.untyped)
 end
@@ -7720,6 +8162,14 @@ module Forwardable
   def self.debug(); end
 
   def self.debug=(debug); end
+end
+
+module FriendlyId
+  UNFRIENDLY_CLASSES = ::T.let(nil, ::T.untyped)
+end
+
+class FriendlyId::Slug
+  RelationType = ::T.let(nil, ::T.untyped)
 end
 
 module GC
@@ -10988,8 +11438,6 @@ class Net::HTTP
   ENVIRONMENT_VARIABLE_IS_MULTIUSER_SAFE = ::T.let(nil, ::T.untyped)
 end
 
-Net::HTTP::ProxyMod = Net::HTTP::ProxyDelta
-
 class Net::HTTPAlreadyReported
   HAS_BODY = ::T.let(nil, ::T.untyped)
 end
@@ -11019,9 +11467,13 @@ end
 class Net::HTTPGatewayTimeout
 end
 
-Net::HTTPInformation::EXCEPTION_TYPE = Net::HTTPError
+class Net::HTTPInformation
+end
 
-Net::HTTPInformationCode = Net::HTTPInformation
+Net::HTTPInformationCode::EXCEPTION_TYPE = Net::HTTPError
+
+class Net::HTTPInformation
+end
 
 class Net::HTTPLoopDetected
   HAS_BODY = ::T.let(nil, ::T.untyped)
@@ -11890,40 +12342,40 @@ module Polyfill
   VERSION = ::T.let(nil, ::T.untyped)
 end
 
-module Polyfill::Module::M47290252061100
+module Polyfill::Module::M47217315831820
 end
 
-module Polyfill::Module::M47290252061100
+module Polyfill::Module::M47217315831820
 end
 
-module Polyfill::Module::M47290266662440
+module Polyfill::Module::M47217330892300
 end
 
-module Polyfill::Module::M47290266662440
+module Polyfill::Module::M47217330892300
 end
 
-module Polyfill::Module::M47290266979940
+module Polyfill::Module::M47217331193080
 end
 
-module Polyfill::Module::M47290266979940
+module Polyfill::Module::M47217331193080
 end
 
-module Polyfill::Module::M47290267328580
+module Polyfill::Module::M47217331592620
 end
 
-module Polyfill::Module::M47290267328580
+module Polyfill::Module::M47217331592620
 end
 
-module Polyfill::Module::M47290268217480
+module Polyfill::Module::M47217332447020
 end
 
-module Polyfill::Module::M47290268217480
+module Polyfill::Module::M47217332447020
 end
 
-module Polyfill::Module::M47290268574860
+module Polyfill::Module::M47217332811580
 end
 
-module Polyfill::Module::M47290268574860
+module Polyfill::Module::M47217332811580
 end
 
 class Proc
@@ -16034,6 +16486,200 @@ class TZInfo::ZoneinfoTimezoneInfo
   MIN_TIMESTAMP = ::T.let(nil, ::T.untyped)
 end
 
+class Tag
+  def after_add_for_articles(); end
+
+  def after_add_for_articles=(val); end
+
+  def after_add_for_articles?(); end
+
+  def after_add_for_taggings(); end
+
+  def after_add_for_taggings=(val); end
+
+  def after_add_for_taggings?(); end
+
+  def after_remove_for_articles(); end
+
+  def after_remove_for_articles=(val); end
+
+  def after_remove_for_articles?(); end
+
+  def after_remove_for_taggings(); end
+
+  def after_remove_for_taggings=(val); end
+
+  def after_remove_for_taggings?(); end
+
+  def autosave_associated_records_for_articles(*args); end
+
+  def autosave_associated_records_for_taggings(*args); end
+
+  def before_add_for_articles(); end
+
+  def before_add_for_articles=(val); end
+
+  def before_add_for_articles?(); end
+
+  def before_add_for_taggings(); end
+
+  def before_add_for_taggings=(val); end
+
+  def before_add_for_taggings?(); end
+
+  def before_remove_for_articles(); end
+
+  def before_remove_for_articles=(val); end
+
+  def before_remove_for_articles?(); end
+
+  def before_remove_for_taggings(); end
+
+  def before_remove_for_taggings=(val); end
+
+  def before_remove_for_taggings?(); end
+
+  def validate_associated_records_for_articles(*args); end
+
+  def validate_associated_records_for_taggings(*args); end
+end
+
+class Tag::ActiveRecord_AssociationRelation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Tag::GeneratedRelationMethods
+end
+
+class Tag::ActiveRecord_AssociationRelation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class Tag::ActiveRecord_Associations_CollectionProxy
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Tag::GeneratedRelationMethods
+end
+
+class Tag::ActiveRecord_Associations_CollectionProxy
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class Tag::ActiveRecord_Relation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Tag::GeneratedRelationMethods
+end
+
+class Tag::ActiveRecord_Relation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+module Tag::GeneratedAssociationMethods
+  def article_ids=(ids); end
+
+  def tagging_ids=(ids); end
+end
+
+module Tag::GeneratedRelationMethods
+end
+
+module Tag::GeneratedRelationMethods
+end
+
+class Tag
+  def self.after_add_for_articles(); end
+
+  def self.after_add_for_articles=(val); end
+
+  def self.after_add_for_articles?(); end
+
+  def self.after_add_for_taggings(); end
+
+  def self.after_add_for_taggings=(val); end
+
+  def self.after_add_for_taggings?(); end
+
+  def self.after_remove_for_articles(); end
+
+  def self.after_remove_for_articles=(val); end
+
+  def self.after_remove_for_articles?(); end
+
+  def self.after_remove_for_taggings(); end
+
+  def self.after_remove_for_taggings=(val); end
+
+  def self.after_remove_for_taggings?(); end
+
+  def self.before_add_for_articles(); end
+
+  def self.before_add_for_articles=(val); end
+
+  def self.before_add_for_articles?(); end
+
+  def self.before_add_for_taggings(); end
+
+  def self.before_add_for_taggings=(val); end
+
+  def self.before_add_for_taggings?(); end
+
+  def self.before_remove_for_articles(); end
+
+  def self.before_remove_for_articles=(val); end
+
+  def self.before_remove_for_articles?(); end
+
+  def self.before_remove_for_taggings(); end
+
+  def self.before_remove_for_taggings=(val); end
+
+  def self.before_remove_for_taggings?(); end
+end
+
+class Tagging
+  def autosave_associated_records_for_article(*args); end
+
+  def autosave_associated_records_for_tag(*args); end
+
+  def belongs_to_counter_cache_after_update(reflection); end
+end
+
+class Tagging::ActiveRecord_AssociationRelation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Tagging::GeneratedRelationMethods
+end
+
+class Tagging::ActiveRecord_AssociationRelation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class Tagging::ActiveRecord_Associations_CollectionProxy
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Tagging::GeneratedRelationMethods
+end
+
+class Tagging::ActiveRecord_Associations_CollectionProxy
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class Tagging::ActiveRecord_Relation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Tagging::GeneratedRelationMethods
+end
+
+class Tagging::ActiveRecord_Relation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+module Tagging::GeneratedAssociationMethods
+  def reload_article(); end
+
+  def reload_tag(); end
+end
+
+module Tagging::GeneratedRelationMethods
+end
+
+module Tagging::GeneratedRelationMethods
+end
+
 class Tempfile
   def _close(); end
 
@@ -16697,13 +17343,220 @@ module UnicodeNormalize
 end
 
 class User
-  include ::User::GeneratedAssociationMethods
   include ::Devise::Models::Authenticatable
   include ::Devise::Models::DatabaseAuthenticatable
   include ::Devise::Models::Rememberable
   include ::Devise::Models::Recoverable
   include ::Devise::Models::Registerable
   include ::Devise::Models::Validatable
+  def after_add_for_articles(); end
+
+  def after_add_for_articles=(val); end
+
+  def after_add_for_articles?(); end
+
+  def after_add_for_comments(); end
+
+  def after_add_for_comments=(val); end
+
+  def after_add_for_comments?(); end
+
+  def after_add_for_favorited_articles(); end
+
+  def after_add_for_favorited_articles=(val); end
+
+  def after_add_for_favorited_articles?(); end
+
+  def after_add_for_favorites(); end
+
+  def after_add_for_favorites=(val); end
+
+  def after_add_for_favorites?(); end
+
+  def after_add_for_follower_follows(); end
+
+  def after_add_for_follower_follows=(val); end
+
+  def after_add_for_follower_follows?(); end
+
+  def after_add_for_followers(); end
+
+  def after_add_for_followers=(val); end
+
+  def after_add_for_followers?(); end
+
+  def after_add_for_following_follows(); end
+
+  def after_add_for_following_follows=(val); end
+
+  def after_add_for_following_follows?(); end
+
+  def after_add_for_followings(); end
+
+  def after_add_for_followings=(val); end
+
+  def after_add_for_followings?(); end
+
+  def after_remove_for_articles(); end
+
+  def after_remove_for_articles=(val); end
+
+  def after_remove_for_articles?(); end
+
+  def after_remove_for_comments(); end
+
+  def after_remove_for_comments=(val); end
+
+  def after_remove_for_comments?(); end
+
+  def after_remove_for_favorited_articles(); end
+
+  def after_remove_for_favorited_articles=(val); end
+
+  def after_remove_for_favorited_articles?(); end
+
+  def after_remove_for_favorites(); end
+
+  def after_remove_for_favorites=(val); end
+
+  def after_remove_for_favorites?(); end
+
+  def after_remove_for_follower_follows(); end
+
+  def after_remove_for_follower_follows=(val); end
+
+  def after_remove_for_follower_follows?(); end
+
+  def after_remove_for_followers(); end
+
+  def after_remove_for_followers=(val); end
+
+  def after_remove_for_followers?(); end
+
+  def after_remove_for_following_follows(); end
+
+  def after_remove_for_following_follows=(val); end
+
+  def after_remove_for_following_follows?(); end
+
+  def after_remove_for_followings(); end
+
+  def after_remove_for_followings=(val); end
+
+  def after_remove_for_followings?(); end
+
+  def autosave_associated_records_for_articles(*args); end
+
+  def autosave_associated_records_for_comments(*args); end
+
+  def autosave_associated_records_for_favorited_articles(*args); end
+
+  def autosave_associated_records_for_favorites(*args); end
+
+  def autosave_associated_records_for_follower_follows(*args); end
+
+  def autosave_associated_records_for_followers(*args); end
+
+  def autosave_associated_records_for_following_follows(*args); end
+
+  def autosave_associated_records_for_followings(*args); end
+
+  def before_add_for_articles(); end
+
+  def before_add_for_articles=(val); end
+
+  def before_add_for_articles?(); end
+
+  def before_add_for_comments(); end
+
+  def before_add_for_comments=(val); end
+
+  def before_add_for_comments?(); end
+
+  def before_add_for_favorited_articles(); end
+
+  def before_add_for_favorited_articles=(val); end
+
+  def before_add_for_favorited_articles?(); end
+
+  def before_add_for_favorites(); end
+
+  def before_add_for_favorites=(val); end
+
+  def before_add_for_favorites?(); end
+
+  def before_add_for_follower_follows(); end
+
+  def before_add_for_follower_follows=(val); end
+
+  def before_add_for_follower_follows?(); end
+
+  def before_add_for_followers(); end
+
+  def before_add_for_followers=(val); end
+
+  def before_add_for_followers?(); end
+
+  def before_add_for_following_follows(); end
+
+  def before_add_for_following_follows=(val); end
+
+  def before_add_for_following_follows?(); end
+
+  def before_add_for_followings(); end
+
+  def before_add_for_followings=(val); end
+
+  def before_add_for_followings?(); end
+
+  def before_remove_for_articles(); end
+
+  def before_remove_for_articles=(val); end
+
+  def before_remove_for_articles?(); end
+
+  def before_remove_for_comments(); end
+
+  def before_remove_for_comments=(val); end
+
+  def before_remove_for_comments?(); end
+
+  def before_remove_for_favorited_articles(); end
+
+  def before_remove_for_favorited_articles=(val); end
+
+  def before_remove_for_favorited_articles?(); end
+
+  def before_remove_for_favorites(); end
+
+  def before_remove_for_favorites=(val); end
+
+  def before_remove_for_favorites?(); end
+
+  def before_remove_for_follower_follows(); end
+
+  def before_remove_for_follower_follows=(val); end
+
+  def before_remove_for_follower_follows?(); end
+
+  def before_remove_for_followers(); end
+
+  def before_remove_for_followers=(val); end
+
+  def before_remove_for_followers?(); end
+
+  def before_remove_for_following_follows(); end
+
+  def before_remove_for_following_follows=(val); end
+
+  def before_remove_for_following_follows?(); end
+
+  def before_remove_for_followings(); end
+
+  def before_remove_for_followings=(val); end
+
+  def before_remove_for_followings?(); end
+
   def current_password(); end
 
   def devise_modules(); end
@@ -16715,6 +17568,22 @@ class User
   def password_confirmation(); end
 
   def password_confirmation=(password_confirmation); end
+
+  def validate_associated_records_for_articles(*args); end
+
+  def validate_associated_records_for_comments(*args); end
+
+  def validate_associated_records_for_favorited_articles(*args); end
+
+  def validate_associated_records_for_favorites(*args); end
+
+  def validate_associated_records_for_follower_follows(*args); end
+
+  def validate_associated_records_for_followers(*args); end
+
+  def validate_associated_records_for_following_follows(*args); end
+
+  def validate_associated_records_for_followings(*args); end
 end
 
 class User::ActiveRecord_AssociationRelation
@@ -16745,9 +17614,21 @@ class User::ActiveRecord_Relation
 end
 
 module User::GeneratedAssociationMethods
-end
+  def article_ids=(ids); end
 
-module User::GeneratedAssociationMethods
+  def comment_ids=(ids); end
+
+  def favorite_ids=(ids); end
+
+  def favorited_article_ids=(ids); end
+
+  def follower_follow_ids=(ids); end
+
+  def follower_ids=(ids); end
+
+  def following_follow_ids=(ids); end
+
+  def following_ids=(ids); end
 end
 
 module User::GeneratedRelationMethods
@@ -16763,6 +17644,200 @@ class User
   extend ::Devise::Models::Recoverable::ClassMethods
   extend ::Devise::Models::Registerable::ClassMethods
   extend ::Devise::Models::Validatable::ClassMethods
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+  def self.after_add_for_articles(); end
+
+  def self.after_add_for_articles=(val); end
+
+  def self.after_add_for_articles?(); end
+
+  def self.after_add_for_comments(); end
+
+  def self.after_add_for_comments=(val); end
+
+  def self.after_add_for_comments?(); end
+
+  def self.after_add_for_favorited_articles(); end
+
+  def self.after_add_for_favorited_articles=(val); end
+
+  def self.after_add_for_favorited_articles?(); end
+
+  def self.after_add_for_favorites(); end
+
+  def self.after_add_for_favorites=(val); end
+
+  def self.after_add_for_favorites?(); end
+
+  def self.after_add_for_follower_follows(); end
+
+  def self.after_add_for_follower_follows=(val); end
+
+  def self.after_add_for_follower_follows?(); end
+
+  def self.after_add_for_followers(); end
+
+  def self.after_add_for_followers=(val); end
+
+  def self.after_add_for_followers?(); end
+
+  def self.after_add_for_following_follows(); end
+
+  def self.after_add_for_following_follows=(val); end
+
+  def self.after_add_for_following_follows?(); end
+
+  def self.after_add_for_followings(); end
+
+  def self.after_add_for_followings=(val); end
+
+  def self.after_add_for_followings?(); end
+
+  def self.after_remove_for_articles(); end
+
+  def self.after_remove_for_articles=(val); end
+
+  def self.after_remove_for_articles?(); end
+
+  def self.after_remove_for_comments(); end
+
+  def self.after_remove_for_comments=(val); end
+
+  def self.after_remove_for_comments?(); end
+
+  def self.after_remove_for_favorited_articles(); end
+
+  def self.after_remove_for_favorited_articles=(val); end
+
+  def self.after_remove_for_favorited_articles?(); end
+
+  def self.after_remove_for_favorites(); end
+
+  def self.after_remove_for_favorites=(val); end
+
+  def self.after_remove_for_favorites?(); end
+
+  def self.after_remove_for_follower_follows(); end
+
+  def self.after_remove_for_follower_follows=(val); end
+
+  def self.after_remove_for_follower_follows?(); end
+
+  def self.after_remove_for_followers(); end
+
+  def self.after_remove_for_followers=(val); end
+
+  def self.after_remove_for_followers?(); end
+
+  def self.after_remove_for_following_follows(); end
+
+  def self.after_remove_for_following_follows=(val); end
+
+  def self.after_remove_for_following_follows?(); end
+
+  def self.after_remove_for_followings(); end
+
+  def self.after_remove_for_followings=(val); end
+
+  def self.after_remove_for_followings?(); end
+
+  def self.before_add_for_articles(); end
+
+  def self.before_add_for_articles=(val); end
+
+  def self.before_add_for_articles?(); end
+
+  def self.before_add_for_comments(); end
+
+  def self.before_add_for_comments=(val); end
+
+  def self.before_add_for_comments?(); end
+
+  def self.before_add_for_favorited_articles(); end
+
+  def self.before_add_for_favorited_articles=(val); end
+
+  def self.before_add_for_favorited_articles?(); end
+
+  def self.before_add_for_favorites(); end
+
+  def self.before_add_for_favorites=(val); end
+
+  def self.before_add_for_favorites?(); end
+
+  def self.before_add_for_follower_follows(); end
+
+  def self.before_add_for_follower_follows=(val); end
+
+  def self.before_add_for_follower_follows?(); end
+
+  def self.before_add_for_followers(); end
+
+  def self.before_add_for_followers=(val); end
+
+  def self.before_add_for_followers?(); end
+
+  def self.before_add_for_following_follows(); end
+
+  def self.before_add_for_following_follows=(val); end
+
+  def self.before_add_for_following_follows?(); end
+
+  def self.before_add_for_followings(); end
+
+  def self.before_add_for_followings=(val); end
+
+  def self.before_add_for_followings?(); end
+
+  def self.before_remove_for_articles(); end
+
+  def self.before_remove_for_articles=(val); end
+
+  def self.before_remove_for_articles?(); end
+
+  def self.before_remove_for_comments(); end
+
+  def self.before_remove_for_comments=(val); end
+
+  def self.before_remove_for_comments?(); end
+
+  def self.before_remove_for_favorited_articles(); end
+
+  def self.before_remove_for_favorited_articles=(val); end
+
+  def self.before_remove_for_favorited_articles?(); end
+
+  def self.before_remove_for_favorites(); end
+
+  def self.before_remove_for_favorites=(val); end
+
+  def self.before_remove_for_favorites?(); end
+
+  def self.before_remove_for_follower_follows(); end
+
+  def self.before_remove_for_follower_follows=(val); end
+
+  def self.before_remove_for_follower_follows?(); end
+
+  def self.before_remove_for_followers(); end
+
+  def self.before_remove_for_followers=(val); end
+
+  def self.before_remove_for_followers?(); end
+
+  def self.before_remove_for_following_follows(); end
+
+  def self.before_remove_for_following_follows=(val); end
+
+  def self.before_remove_for_following_follows?(); end
+
+  def self.before_remove_for_followings(); end
+
+  def self.before_remove_for_followings=(val); end
+
+  def self.before_remove_for_followings?(); end
+
   def self.devise_modules(); end
 
   def self.devise_modules=(val); end
@@ -16776,11 +17851,6 @@ end
 
 class UsersController::UserParams
   def self.inherited(s); end
-end
-
-class UsersController
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 class Vector

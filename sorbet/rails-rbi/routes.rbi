@@ -91,6 +91,41 @@ module GeneratedUrlHelpers
   sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
   def user_url(*args, **kwargs); end
 
+  # Sigs for route /api/profiles/:username(.:format)
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def profile_path(*args, **kwargs); end
+
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def profile_url(*args, **kwargs); end
+
+  # Sigs for route /api/profiles/:username/follow(.:format)
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def follow_path(*args, **kwargs); end
+
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def follow_url(*args, **kwargs); end
+
+  # Sigs for route /api/articles/feed(.:format)
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def feed_articles_path(*args, **kwargs); end
+
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def feed_articles_url(*args, **kwargs); end
+
+  # Sigs for route /api/articles(.:format)
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def articles_path(*args, **kwargs); end
+
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def articles_url(*args, **kwargs); end
+
+  # Sigs for route /api/articles/:slug(.:format)
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def article_path(*args, **kwargs); end
+
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def article_url(*args, **kwargs); end
+
   # Sigs for route /rails/active_storage/blobs/:signed_id/*filename(.:format)
   sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
   def rails_service_blob_path(*args, **kwargs); end

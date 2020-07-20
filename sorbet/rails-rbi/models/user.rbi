@@ -109,6 +109,42 @@ module User::GeneratedAttributeMethods
 end
 
 module User::GeneratedAssociationMethods
+  sig { returns(::Article::ActiveRecord_Associations_CollectionProxy) }
+  def articles; end
+
+  sig { returns(T::Array[Integer]) }
+  def article_ids; end
+
+  sig { params(value: T::Enumerable[::Article]).void }
+  def articles=(value); end
+
+  sig { returns(::Comment::ActiveRecord_Associations_CollectionProxy) }
+  def comments; end
+
+  sig { returns(T::Array[Integer]) }
+  def comment_ids; end
+
+  sig { params(value: T::Enumerable[::Comment]).void }
+  def comments=(value); end
+
+  sig { returns(::Article::ActiveRecord_Associations_CollectionProxy) }
+  def favorited_articles; end
+
+  sig { returns(T::Array[Integer]) }
+  def favorited_article_ids; end
+
+  sig { params(value: T::Enumerable[::Article]).void }
+  def favorited_articles=(value); end
+
+  sig { returns(::Favorite::ActiveRecord_Associations_CollectionProxy) }
+  def favorites; end
+
+  sig { returns(T::Array[Integer]) }
+  def favorite_ids; end
+
+  sig { params(value: T::Enumerable[::Favorite]).void }
+  def favorites=(value); end
+
   sig { returns(::Follow::ActiveRecord_Associations_CollectionProxy) }
   def follower_follows; end
 
