@@ -1,15 +1,37 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  description: MyString
-  body: MyText
-  author: one
-  slug: my-string
+rudy_article:
+  title: Orsted and Co is the best
+  description: desc
+  body: body
+  author: rudy
+  slug: orsted-and-co-is-the-best
+  #tags: life, experience
+  #favored_users: sylphy, roxy
 
-two:
-  title: MyString1
-  description: MyString
-  body: MyText
-  author: two
-  slug: my-string1
+roxy_article:
+  title: How to make use of less known water magic
+  description: desc
+  body: body
+  author: roxy
+  slug: how-to-make-use-of-less-known-water-magic
+  #tags: knowledge, magic
+  #favored_users: rudy, sylphy
+
+sylphy_article:
+  title: Living in a harem
+  description: desc
+  body: body
+  author: sylphy
+  slug: living-in-a-harem
+  #tags: life, experience
+  #favored_users: rudy
+
+eris_article:
+  title: Training routines
+  description: desc
+  body: body
+  author: eris
+  slug: training-routines
+  #tags: knowledge, training
+  #favored_users: rudy

@@ -12,5 +12,23 @@ minh:
   bio: Roxy is the best
 # column: value
 #
-two: {}
+rudy:
+  username: quagmire
+  encrypted_password: human
+  email: rudeus@greyrat.ranoa
+
+roxy:
+  username: water_king
+  encrypted_password: migurd
+  email: roxy@greyrat.ranoa
+
+eris:
+  username: sword_emperor
+  encrypted_password: human
+  email: eris@greyrat.ranoa
+
+sylphy:
+  username: fitts
+  encrypted_password: elf
+  email: sylphy@greyrat.ranoa
 # column: value

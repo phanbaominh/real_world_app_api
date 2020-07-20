@@ -1,7 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
+life:
+  name: life
 
-two:
-  name: MyString
+experience:
+  name: experience
+
+magic:
+  name: magic
+
+knowledge:
+  name: knowledge
+
+training:
+  name: training

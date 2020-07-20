@@ -1,9 +1,33 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  tag: one
-  article: one
+  tag: life
+  article: rudy_article
 
 two:
-  tag: two
-  article: two
+  tag: experience
+  article: rudy_article
+
+one1:
+  tag: life
+  article: sylphy_article
+
+two1:
+  tag: experience
+  article: sylphy_article
+
+one2:
+  tag: magic
+  article: roxy_article
+
+two2:
+  tag: knowledge
+  article: roxy_article
+
+one3:
+  tag: training
+  article: eris_article
+
+two3:
+  tag: knowledge
+  article: eris_article

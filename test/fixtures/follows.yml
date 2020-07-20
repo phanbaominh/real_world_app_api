@@ -1,0 +1,23 @@
+one:
+  follower: rudy
+  following: roxy
+
+one1:
+  follower: rudy
+  following: sylphy
+
+one2:
+  follower: rudy
+  following: eris
+
+one3:
+  follower: sylphy
+  following: eris
+
+one4:
+  follower: roxy
+  following: sylphy
+
+one5:
+  follower: eris
+  following: roxy
