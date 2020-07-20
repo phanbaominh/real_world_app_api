@@ -1,11 +1,5 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  body: MyText
-  author: one
-  article: one
+one: {}
 
-two:
-  body: MyText
-  author: two
-  article: two
+two: {}

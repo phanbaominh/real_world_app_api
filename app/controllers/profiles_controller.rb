@@ -7,24 +7,37 @@ class ProfilesController < ApplicationController
   before_action :set_user
 
   sig { void }
-  def show; end
+  def show
+    render_profile
+  end
 
   sig { void }
   def follow
-    T.must(current_user).follow(@user)
-    render :show
+    current_user.follow(@user)
+    render_profile
   end
 
   sig { void }
   def unfollow
-    T.must(current_user).unfollow(@user)
-    render :show
+    current_user.unfollow(@user)
+    render_profile
   end
 
   private
 
   sig { void }
   def set_user
+    @current_user = @current_user_id ? current_user : nil
     @user = User.find_by(username: params[:username])
+  end
+
+  sig { returns(Hash) }
+  def user_options
+    { user: @user, current_user: @current_user, user_field: :profile }
+  end
+
+  sig { void }
+  def render_profile
+    render :show, locals: user_options
   end
 end

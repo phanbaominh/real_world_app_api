@@ -11,6 +11,10 @@ Rails.application.routes.draw do
       post '/follow', to: 'profiles#follow'
       delete '/follow', to: 'profiles#unfollow'
     end
+
+    resources :articles, except: %i[new edit], param: :slug do
+      get 'feed', on: :collection
+    end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -22,17 +22,17 @@ class UsersController < ApplicationController
 
   sig { void }
   def update
-    if T.must(current_user).update(user_params.user.serialize)
+    if current_user.update(user_params)
       render :show
     else
-      render json: { errors: T.must(current_user).errors }, status: :unprocessable_entity
+      render json: { errors: current_user.errors }, status: :unprocessable_entity
     end
   end
 
   private
 
-  sig { returns(UserParams) }
+  sig { returns(T::Hash[String, String]) }
   def user_params
-    TypedParams[UserParams].new.extract!(params)
+    TypedParams[UserParams].new.extract!(params).user.serialize
   end
 end

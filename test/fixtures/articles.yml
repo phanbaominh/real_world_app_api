@@ -5,9 +5,11 @@ one:
   description: MyString
   body: MyText
   author: one
+  slug: my-string
 
 two:
-  title: MyString
+  title: MyString1
   description: MyString
   body: MyText
   author: two
+  slug: my-string1
