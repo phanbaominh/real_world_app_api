@@ -46,7 +46,7 @@ class Article < ApplicationRecord
     user.favorited_articles.include?(self)
   end
 
-  sig { returns(Number) }
+  sig { returns(Integer) }
   def favorites_count
     favored_users.size
   end

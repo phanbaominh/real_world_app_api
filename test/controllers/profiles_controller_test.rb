@@ -1,17 +1,23 @@
 # typed: false
 # frozen_string_literal: true
+
 require 'test_helper'
 
 class ProfilesControllerTest < ActionDispatch::IntegrationTest
   def assert_profile(received_profile)
     user = users(:minh)
-    assert(user.username, received_profile['username'])
-    assert(user.bio, received_profile['bio'])
-    assert(user.image, received_profile['image'])
+    assert_equal(user.username, received_profile['username'])
+    assert_equal(user.bio, received_profile['bio'])
+    assert_equal(user.image, received_profile['image'])
   end
 
   def profile_from_response
     JSON.parse(@response.body)['profile']
+  end
+
+  test 'get non existant profile' do
+    get profile_path(:cool)
+    assert_response :not_found
   end
 
   test 'get profile' do

@@ -28,6 +28,7 @@ class ArticlesController < ApplicationController
     article = current_user.articles.build(article_params.serialize.slice!(:tag_list))
     article.add_tags!(article_params.tag_list)
     if article.save
+      @article = article
       render_article
     else
       render json: { errors: article.errors }, status: :unprocessable_entity
@@ -49,8 +50,8 @@ class ArticlesController < ApplicationController
   end
 
   sig { void }
-  def delete
-    @article.destroy
+  def destroy
+    @article.destroy ? head(:ok) : head(:unprocessable_entity)
   end
 
   # rubocop:disable Metrics/AbcSize
@@ -87,7 +88,9 @@ class ArticlesController < ApplicationController
 
   sig { void }
   def set_article
-    head :not_found unless (@article = Article.friendly.find(params[:slug]))
+    @article = Article.friendly.find(params[:slug])
+  rescue ActiveRecord::RecordNotFound
+    head :not_found
   end
 
   sig { void }
@@ -97,7 +100,8 @@ class ArticlesController < ApplicationController
 
   sig { void }
   def render_article
-    render :show, locals: { article: @article, current_user: current_user }
+    tmp = @current_user_id ? current_user : nil
+    render :show, locals: { article: @article, current_user: tmp }
   end
 
   sig { params(articles: Article::ActiveRecord_Relation).void }

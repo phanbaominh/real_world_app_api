@@ -11,6 +11,11 @@ class ActiveSupport::TestCase
     email: 'test@mail.com', password: 'gamegame', username: 'tester'
   }.freeze
 
+  def login_with_user(user, password)
+    post new_user_session_path, params: { user: { email: user.email, password: password } }
+    @token = user_from_response['token']
+  end
+
   def user_from_response
     body = JSON.parse(@response.body)
     body['user'] || body

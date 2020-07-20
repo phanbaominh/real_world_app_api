@@ -38,6 +38,6 @@ class ProfilesController < ApplicationController
 
   sig { void }
   def render_profile
-    render :show, locals: user_options
+    render partial: 'profile', locals: user_options
   end
 end
