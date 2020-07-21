@@ -12,8 +12,10 @@ Rails.application.routes.draw do
       delete '/follow', to: 'profiles#unfollow'
     end
 
+    resources :tags, only: :index
     resources :articles, except: %i[new edit], param: :slug do
       get 'feed', on: :collection
+      resources :comments, only: %i[create index destroy]
     end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

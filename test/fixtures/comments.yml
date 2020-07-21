@@ -1,5 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one: {}
+rudy_comment1:
+  user: rudy
+  article: roxy_article
+  body: Great article Roxy!
 
-two: {}
+rudy_comment2:
+  user: rudy
+  article: roxy_article
+  body: That's my goddess for you!
+
+sylphy_comment:
+  user: sylphy
+  article: roxy_article
+  body: Dial it down Rudy!

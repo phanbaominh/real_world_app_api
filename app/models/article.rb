@@ -68,4 +68,9 @@ class Article < ApplicationRecord
       tags << tag
     end
   end
+
+  sig { params(comment_id: Integer).returns(T::Boolean) }
+  def comment?(comment_id)
+    comments.include?(Comment.find_by(id: comment_id))
+  end
 end

@@ -5,7 +5,7 @@ require 'test_helper'
 
 class ArticlesControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
-  RUDY_PASSWORD = 'human'
+
   def article_from_response
     Article.friendly.find(JSON.parse(@response.body)['article']['slug'])
   end
@@ -56,7 +56,7 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'get articles with authorization' do
-    login_with_user(users(:rudy), RUDY_PASSWORD)
+    login_rudy
     get articles_path, headers: authorization_header
     assert_response :success
     response = JSON.parse(@response.body)
@@ -65,7 +65,7 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'get feed' do
-    login_with_user(users(:rudy), RUDY_PASSWORD)
+    login_rudy
     get feed_articles_path, headers: authorization_header
     assert_response :success
     response = JSON.parse(@response.body)
@@ -75,7 +75,7 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'create article' do
-    login_with_user(users(:rudy), RUDY_PASSWORD)
+    login_rudy
     article = { title: 'test', body: 'test', description: 'test' }
     post articles_path, params: { article: article }, headers: authorization_header
     assert_response :success
@@ -84,7 +84,7 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'delete article' do
-    login_with_user(users(:rudy), RUDY_PASSWORD)
+    login_rudy
     assert Article.find(articles(:rudy_article).id)
     delete article_path(articles(:rudy_article)), headers: authorization_header
     assert_response :success
@@ -92,7 +92,7 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'update article' do
-    login_with_user(users(:rudy), RUDY_PASSWORD)
+    login_rudy
     new_title = 'Orsted is best'
     put article_path(articles(:rudy_article)), headers: authorization_header,
                                                params: { article: { title: new_title } }
