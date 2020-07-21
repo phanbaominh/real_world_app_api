@@ -46,6 +46,16 @@ class User < ApplicationRecord
     followings.delete(user)
   end
 
+  sig { params(article: Article).void }
+  def favorite(article)
+    favorited_articles << article
+  end
+
+  sig { params(article: Article).void }
+  def unfavorite(article)
+    favorited_articles.delete(article)
+  end
+
   sig { returns(Article::ActiveRecord_Relation) }
   def followed_articles
     Article.authored_by(followings)

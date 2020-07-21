@@ -4,6 +4,7 @@
 require 'test_helper'
 
 class ArticlesControllerTest < ActionDispatch::IntegrationTest
+  extend T::Sig
   include Devise::Test::IntegrationHelpers
 
   def article_from_response

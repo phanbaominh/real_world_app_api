@@ -53,8 +53,16 @@ class ApplicationController < ActionController::Base
   def current_user_or_nil
     @current_user_id ? current_user : nil
   end
+
   sig { returns(T::Boolean) }
   def signed_in?
     @current_user_id.present?
+  end
+
+  sig { void }
+  def set_article
+    @article = Article.friendly.find(params[:slug] || params[:article_slug])
+  rescue ActiveRecord::RecordNotFound
+    head :not_found
   end
 end

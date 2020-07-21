@@ -57,7 +57,6 @@ class ArticlesController < ApplicationController
     @article.destroy ? head(:ok) : head(:unprocessable_entity)
   end
 
-  # rubocop:disable Metrics/AbcSize
   sig { void }
   def index
     articles = Article.all
@@ -71,7 +70,7 @@ class ArticlesController < ApplicationController
 
     render_articles(articles)
   end
-  # rubocop:enable Metrics/AbcSize
+
   sig { void }
   def feed
     ap = articles_params
@@ -92,13 +91,6 @@ class ArticlesController < ApplicationController
   sig { returns(ArticlesParams) }
   def articles_params
     TypedParams[ArticlesParams].new.extract!(params)
-  end
-
-  sig { void }
-  def set_article
-    @article = Article.friendly.find(params[:slug])
-  rescue ActiveRecord::RecordNotFound
-    head :not_found
   end
 
   sig { void }

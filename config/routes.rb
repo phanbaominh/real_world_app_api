@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     resources :tags, only: :index
     resources :articles, except: %i[new edit], param: :slug do
       get 'feed', on: :collection
+      resource :favorite, only: %i[create destroy]
       resources :comments, only: %i[create index destroy]
     end
   end
