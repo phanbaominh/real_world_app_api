@@ -6,9 +6,9 @@ one1:
   follower: rudy
   following: sylphy
 
-one2:
-  follower: rudy
-  following: eris
+# one2:
+#   follower: rudy
+#   following: eris
 
 one3:
   follower: sylphy

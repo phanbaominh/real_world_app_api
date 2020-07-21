@@ -8,9 +8,9 @@ two:
   user: roxy
   article: rudy_article
  
-three:
-  user: rudy
-  article: roxy_article
+# three:
+#   user: rudy
+#   article: roxy_article
 
 four:
   user: sylphy

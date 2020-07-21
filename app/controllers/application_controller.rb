@@ -49,6 +49,10 @@ class ApplicationController < ActionController::Base
     @current_user ||= super || User.find(@current_user_id)
   end
 
+  sig { returns(T.nilable(User)) }
+  def current_user_or_nil
+    @current_user_id ? current_user : nil
+  end
   sig { returns(T::Boolean) }
   def signed_in?
     @current_user_id.present?

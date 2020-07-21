@@ -3,7 +3,7 @@
 
 class ArticlesController < ApplicationController
   extend T::Sig
-  before_action :authenticate_user!, except: %i[show feed index]
+  before_action :authenticate_user!, except: %i[show index]
   before_action :set_article, except: %i[create feed index]
   before_action :check_author, except: %i[show create feed index]
 
@@ -12,15 +12,18 @@ class ArticlesController < ApplicationController
     const :description, T.nilable(String)
     const :body, T.nilable(String)
     const :tag_list, T.nilable(T::Array[String])
+  end
+
+  class ArticleParams < T::Struct
+    const :article, ArticleFields
+  end
+
+  class ArticlesParams < T::Struct
     const :author, T.nilable(String)
     const :favorited, T.nilable(String)
     const :limit, T.nilable(Integer)
     const :offset, T.nilable(Integer)
     const :tag, T.nilable(String)
-  end
-
-  class ArticleParams < T::Struct
-    const :article, ArticleFields
   end
 
   sig { void }
@@ -58,10 +61,10 @@ class ArticlesController < ApplicationController
   sig { void }
   def index
     articles = Article.all
-    ap = article_params
+    ap = articles_params
 
     articles = articles.authored_by(User.find_by(username: ap.author)) if ap.author
-    articles = articles.tagged_with(ap.tag) if ap.tag
+    articles = articles.tagged_with(Tag.find_by(name: ap.tag)) if ap.tag
     articles = articles.favorited_by(User.find_by(username: ap.favorited)) if ap.favorited
     articles = articles.limit(ap.limit) if ap.limit
     articles = articles.offset(ap.offset) if ap.offset
@@ -71,8 +74,8 @@ class ArticlesController < ApplicationController
   # rubocop:enable Metrics/AbcSize
   sig { void }
   def feed
-    ap = article_params
-    articles = Article.favorited_by(current_user.followings)
+    ap = articles_params
+    articles = current_user.followed_articles
     articles = articles.limit(ap.limit) if ap.limit
     articles = articles.offset(ap.offset) if ap.offset
 
@@ -84,6 +87,11 @@ class ArticlesController < ApplicationController
   sig { returns(ArticleFields) }
   def article_params
     TypedParams[ArticleParams].new.extract!(params).article
+  end
+
+  sig { returns(ArticlesParams) }
+  def articles_params
+    TypedParams[ArticlesParams].new.extract!(params)
   end
 
   sig { void }
@@ -100,12 +108,11 @@ class ArticlesController < ApplicationController
 
   sig { void }
   def render_article
-    tmp = @current_user_id ? current_user : nil
-    render :show, locals: { article: @article, current_user: tmp }
+    render :show, locals: { article: @article, current_user: current_user_or_nil }
   end
 
   sig { params(articles: Article::ActiveRecord_Relation).void }
   def render_articles(articles)
-    render :index, locals: { articles: articles }
+    render :index, locals: { articles: articles, current_user: current_user_or_nil }
   end
 end

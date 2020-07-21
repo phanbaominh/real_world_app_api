@@ -45,4 +45,9 @@ class User < ApplicationRecord
   def unfollow(user)
     followings.delete(user)
   end
+
+  sig { returns(Article::ActiveRecord_Relation) }
+  def followed_articles
+    Article.authored_by(followings)
+  end
 end

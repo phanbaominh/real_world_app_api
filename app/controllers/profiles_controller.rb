@@ -27,7 +27,7 @@ class ProfilesController < ApplicationController
 
   sig { void }
   def set_user
-    @current_user = @current_user_id ? current_user : nil
+    current_user_or_nil
     head :not_found unless (@user = User.find_by(username: params[:username]))
   end
 
