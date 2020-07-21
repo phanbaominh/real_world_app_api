@@ -27,7 +27,7 @@ class ActiveSupport::TestCase
 
   def user_from_response
     body = JSON.parse(@response.body)
-    body['user'] || body
+    body['user']
   end
 
   def assert_create_and_login_user
