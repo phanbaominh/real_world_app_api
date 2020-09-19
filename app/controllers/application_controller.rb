@@ -11,8 +11,18 @@ class ApplicationController < ActionController::Base
   respond_to :json
   before_action :underscore_params!
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :authenticate_user_with_jwt
   before_action :cors_set_controll_access_headers
+  before_action :authenticate_user_with_jwt
+
+  def cors_preflight_check
+    return unless request.method == :options
+
+    headers['Access-Control-Allow-Origin'] = '*'
+    headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS'
+    headers['Access-Control-Allow-Headers'] = '*'
+    headers['Access-Control-Max-Age'] = '1728000'
+    render text: '', content_type: 'text/plain'
+  end
 
   private
 
@@ -21,6 +31,7 @@ class ApplicationController < ActionController::Base
     headers['Access-Control-Allow-Methods'] = 'POST, PUT, DELETE, GET, OPTIONS'
     headers['Access-Control-Request-Method'] = '*'
     headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+    headers['Access-Control-Max-Age'] = '1728000'
   end
   # transform all param key to underscore for easier handling
   # due to API spec requiring json request's key be in camelCase
@@ -36,7 +47,10 @@ class ApplicationController < ActionController::Base
 
   sig { void }
   def authenticate_user_with_jwt
-    return if request.headers['Authorization'].blank?
+    if request.headers['Authorization'].blank?
+      @current_user_id = nil
+      return
+    end
 
     authenticate_or_request_with_http_token do |token|
       payload = JWT.decode(token, Rails.application.credentials[:secret_key_base]).first

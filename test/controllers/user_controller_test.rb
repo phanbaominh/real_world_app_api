@@ -29,6 +29,14 @@ class UserControllerTest < ActionDispatch::IntegrationTest
     assert_user(received_user)
   end
 
+  def test_logout_user
+    assert_create_and_login_user
+    received_user = user_from_response
+    assert_user(received_user)
+    delete destroy_user_session_path, headers: authorization_header
+    assert_response :success
+  end
+
   def test_get_user
     assert_create_and_login_user
     get user_path, headers: authorization_header

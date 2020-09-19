@@ -59,7 +59,7 @@ class ArticlesController < ApplicationController
 
   sig { void }
   def index
-    articles = Article.all
+    articles = Article.all.includes(:tags, :author, :favored_users)
     ap = articles_params
 
     articles = articles.authored_by(User.find_by(username: ap.author)) if ap.author

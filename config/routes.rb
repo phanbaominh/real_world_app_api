@@ -4,7 +4,7 @@
 Rails.application.routes.draw do
   scope :api, defaults: { format: :json } do
     devise_for :users, controllers: { sessions: 'sessions', registrations: 'registrations' },
-                       path_names: { sign_in: 'login' }
+                       path_names: { sign_in: 'login', sign_out: 'logout' }
 
     resource :user, only: %i[show update]
     scope 'profiles/:username' do
@@ -19,6 +19,8 @@ Rails.application.routes.draw do
       resource :favorite, only: %i[create destroy]
       resources :comments, only: %i[create index destroy]
     end
+
+    match '*all' => 'application#cors_preflight_check', via: [:options]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

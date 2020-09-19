@@ -40,7 +40,7 @@ class ActiveSupport::TestCase
   end
 
   def authorization_header
-    { 'Authorization' => "Token token=#{@token}" }
+    { 'Authorization' => "Token #{@token}" }
   end
 
   def assert_followings(model_with_author, user)
