@@ -5,7 +5,10 @@ class RegistrationsController < Devise::RegistrationsController
   # rubocop:disable Metrics/MethodLength
   def create
     build_resource(sign_up_params)
-    resource.save
+    unless resource.save
+      render json: { errors: resource.errors }, status: :unprocessable_entity
+      return
+    end
     yield resource if block_given?
     if resource.persisted?
       if resource.active_for_authentication?
