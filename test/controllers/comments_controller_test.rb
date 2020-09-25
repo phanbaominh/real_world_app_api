@@ -22,7 +22,7 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   sig { void }
-  def test_get_articles_with_auth
+  def test_get_comments_with_auth
     login_rudy
     get article_comments_path(articles(:roxy_article)), headers: authorization_header
     assert_response :success
@@ -34,7 +34,7 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   sig { void }
-  def test_get_articles
+  def test_get_comment
     get article_comments_path(articles(:roxy_article))
     assert_response :success
     assert_comments(
@@ -44,7 +44,7 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   sig { void }
-  def test_create_article
+  def test_create_comment
     login_rudy
     post article_comments_path(articles(:roxy_article)),
          headers: authorization_header,
@@ -55,7 +55,7 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   sig { void }
-  def test_destroy_article
+  def test_destroy_comment
     login_rudy
     comment_id = comments(:rudy_comment1).id
     assert articles(:roxy_article).comment?(comment_id)

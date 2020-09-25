@@ -28,7 +28,7 @@ class ArticlesController < ApplicationController
 
   sig { void }
   def create
-    article = current_user.articles.build(article_params.serialize.slice!(:tag_list))
+    article = current_user.articles.build(article_params.serialize.slice!('tag_list'))
     article.add_tags!(article_params.tag_list)
     if article.save
       @article = article
@@ -45,7 +45,7 @@ class ArticlesController < ApplicationController
 
   sig { void }
   def update
-    if @article.update(article_params.serialize)
+    if @article.update(article_params.serialize.slice!('tag_list'))
       render_article
     else
       render json: { errors: @article.errors }, status: :unprocessable_entity

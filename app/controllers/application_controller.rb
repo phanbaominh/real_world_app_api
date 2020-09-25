@@ -37,7 +37,9 @@ class ApplicationController < ActionController::Base
   # due to API spec requiring json request's key be in camelCase
   sig { void }
   def underscore_params!
-    params.transform_keys!(&:underscore)
+    params_hash = params.to_unsafe_hash
+    params_hash.deep_transform_keys!(&:underscore)
+    self.params = ActionController::Parameters.new(params_hash)
   end
 
   sig { void }

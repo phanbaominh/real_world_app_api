@@ -77,11 +77,13 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
 
   test 'create article' do
     login_rudy
-    article = { title: 'test', body: 'test', description: 'test' }
+    article = { title: 'test', body: 'test', description: 'test', tagList: ['test_tag'] }
     post articles_path, params: { article: article }, headers: authorization_header
     assert_response :success
-    assert(article = Article.find_by(title: article[:title]))
-    assert users(:rudy).articles.include?(article)
+    received_article = JSON.parse(@response.body)['article']
+    assert_equal(article[:title], received_article['title'])
+    assert_equal(article[:tagList], received_article['tagList'])
+    assert users(:rudy).articles.find_by(slug: received_article['slug'])
   end
 
   test 'delete article' do
