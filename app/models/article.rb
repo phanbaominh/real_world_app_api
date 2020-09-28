@@ -4,7 +4,7 @@
 class Article < ApplicationRecord
   extend T::Sig
   extend FriendlyId
-
+  default_scope -> { order created_at: :desc }
   scope :tagged_with,
         ->(tag) { joins(:taggings).where(taggings: { tag: tag }) }
   scope :favorited_by,
@@ -43,7 +43,7 @@ class Article < ApplicationRecord
   def favorited?(user)
     return false unless user
 
-    user.favorited_articles.include?(self)
+    favored_users.include?(user)
   end
 
   sig { returns(Integer) }

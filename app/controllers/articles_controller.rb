@@ -59,14 +59,15 @@ class ArticlesController < ApplicationController
 
   sig { void }
   def index
-    articles = Article.all.includes(:tags, :author, :favored_users)
+    articles = Article.all.includes({ author: :followers }, :tags, :favored_users)
     ap = articles_params
 
     articles = articles.authored_by(User.find_by(username: ap.author)) if ap.author
     articles = articles.tagged_with(Tag.find_by(name: ap.tag)) if ap.tag
     articles = articles.favorited_by(User.find_by(username: ap.favorited)) if ap.favorited
-    articles = articles.limit(ap.limit) if ap.limit
-    articles = articles.offset(ap.offset) if ap.offset
+    @article_count = articles.count
+    articles = articles.limit(ap.limit || 20)
+    articles = articles.offset(ap.offset || 0)
 
     render_articles(articles)
   end
@@ -74,9 +75,10 @@ class ArticlesController < ApplicationController
   sig { void }
   def feed
     ap = articles_params
-    articles = current_user.followed_articles
-    articles = articles.limit(ap.limit) if ap.limit
-    articles = articles.offset(ap.offset) if ap.offset
+    articles = current_user.followed_articles.includes({ author: :followers }, :tags, :favored_users)
+    @article_count = articles.count
+    articles = articles.limit(ap.limit || 20)
+    articles = articles.offset(ap.offset || 0)
 
     render_articles(articles)
   end
@@ -105,6 +107,6 @@ class ArticlesController < ApplicationController
 
   sig { params(articles: Article::ActiveRecord_Relation).void }
   def render_articles(articles)
-    render :index, locals: { articles: articles, current_user: current_user_or_nil }
+    render :index, locals: { articles: articles, current_user: current_user_or_nil, articlesCount: @article_count }
   end
 end
