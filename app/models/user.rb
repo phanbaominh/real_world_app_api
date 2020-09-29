@@ -27,7 +27,7 @@ class User < ApplicationRecord
         id: id,
         exp: 60.days.from_now.to_i
       },
-      Rails.application.credentials[:secret_key_base]
+      Rails.application.credentials[:SECRET_KEY_BASE]
     )
   end
 
