@@ -12,11 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2020_09_23_135013) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.string "description"
     t.text "body"
-    t.integer "author_id"
+    t.bigint "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "slug"
@@ -26,8 +29,8 @@ ActiveRecord::Schema.define(version: 2020_09_23_135013) do
 
   create_table "comments", force: :cascade do |t|
     t.text "body", null: false
-    t.integer "user_id"
-    t.integer "article_id"
+    t.bigint "user_id"
+    t.bigint "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["article_id"], name: "index_comments_on_article_id"
@@ -35,8 +38,8 @@ ActiveRecord::Schema.define(version: 2020_09_23_135013) do
   end
 
   create_table "favorites", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "article_id"
+    t.bigint "user_id"
+    t.bigint "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["article_id"], name: "index_favorites_on_article_id"
@@ -45,8 +48,8 @@ ActiveRecord::Schema.define(version: 2020_09_23_135013) do
   end
 
   create_table "follows", force: :cascade do |t|
-    t.integer "following_id"
-    t.integer "follower_id"
+    t.bigint "following_id"
+    t.bigint "follower_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["follower_id"], name: "index_follows_on_follower_id"
@@ -55,8 +58,8 @@ ActiveRecord::Schema.define(version: 2020_09_23_135013) do
   end
 
   create_table "taggings", force: :cascade do |t|
-    t.integer "tag_id"
-    t.integer "article_id"
+    t.bigint "tag_id"
+    t.bigint "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["article_id"], name: "index_taggings_on_article_id"
@@ -85,4 +88,13 @@ ActiveRecord::Schema.define(version: 2020_09_23_135013) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  add_foreign_key "articles", "users", column: "author_id"
+  add_foreign_key "comments", "articles"
+  add_foreign_key "comments", "users"
+  add_foreign_key "favorites", "articles"
+  add_foreign_key "favorites", "users"
+  add_foreign_key "follows", "users", column: "follower_id"
+  add_foreign_key "follows", "users", column: "following_id"
+  add_foreign_key "taggings", "articles"
+  add_foreign_key "taggings", "tags"
 end
